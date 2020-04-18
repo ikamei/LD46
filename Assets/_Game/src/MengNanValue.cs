@@ -6,34 +6,95 @@ using System;
 using System.IO;
 
 public class MengNanValue : MonoBehaviour {
-    double value;
-    
-    public double GetValue()
+    int m_value;
+    List<Sprite> m_numbers;
+    void Start()
     {
-        return value;
+        m_numbers = new List<Sprite>();
+        string[] strNumbers = { "number_0", "number_1", "number_2", "number_3", "number_4", "number_5", "number_6", "number_7", "number_8", "number_9" };
+        for( int j=0; j<10; ++j )
+        {
+            Texture2D tex = Resources.Load<Texture2D>(strNumbers[j]);
+            m_numbers.Add( Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f) );
+        }
+
+        SetValue(189);
     }
 
-    public void SetValue(double _value)
+    public int GetValue()
     {
-        value = _value;
+        return m_value;
+    }
+
+    public void SetValue(int _value)
+    {
+        m_value = _value;
+        updateGUI();
     }
 
     void updateGUI()
     {
-        // if( slot_index<0 || slot_index>=item_images.Length )
-        //     return;
-        
-        // Texture2D tex = (Texture2D)Resources.Load( item_image, typeof(Texture2D) );
-        // Sprite mySprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
+        int numberCount;
+        if( m_value < 10 )
+            numberCount = 1;
+        else if( m_value < 100 )
+            numberCount = 2;
+        else if( m_value < 1000 )
+            numberCount = 3;
+        else
+            return;
+        List<Sprite> numbers = new List<Sprite>();
+        if( numberCount == 3 )
+        {
+            int value = m_value / 100;
+            numbers.Add( UnityEngine.Object.Instantiate(m_numbers[value]) );
 
-        // items[slot_index].active = true;
-        // item_images[slot_index].GetComponent<Image>().sprite = mySprite;
-        // item_names[slot_index].GetComponent<Text>().text     = item_name;
-        // item_prices[slot_index].GetComponent<Text>().text    = "" + price;
-        // item_data[slot_index]                                = _item_data;
+            value = m_value / 10;
+            int idx = value % 10;
+            numbers.Add( UnityEngine.Object.Instantiate(m_numbers[idx]) );
+
+            value = (m_value / 10) * 10;
+            idx = m_value - value;
+            numbers.Add( UnityEngine.Object.Instantiate(m_numbers[idx]) );
+        }
+        if( numberCount == 2 )
+        {
+            int idx = m_value / 10;
+            numbers.Add( UnityEngine.Object.Instantiate(m_numbers[idx]) );
+
+            idx = m_value % 10;
+            numbers.Add( UnityEngine.Object.Instantiate(m_numbers[idx]) );
+        }
+        if( numberCount == 1 )
+        {
+            int idx = m_value;
+            numbers.Add( UnityEngine.Object.Instantiate(m_numbers[idx]) );
+        }
+
+        List<GameObject> goes = new List<GameObject>();
+        for( int j=0; j<numbers.Count; ++j )
+        {
+            GameObject go = new GameObject();
+            goes.Add( go );
+            SpriteRenderer renderer = go.AddComponent<SpriteRenderer>();
+            // renderer.enabled = 1==is_enable;
+            // renderer.sortingOrder = scn_sprite_renderable_component_get_order_in_layer( component_object );
+            // renderer.sortingLayerName = IntPtrToString( scn_sprite_renderable_component_get_sorting_layer( component_object ));
+            renderer.sprite = numbers[j];
+            go.transform.parent = gameObject.transform;
+        }
+        // Debug.Log( "numbers[0].textureRect.width = " + numbers[0].textureRect.width );
+        // Debug.Log( "numbers[0].rect.width = " + numbers[0].rect.width );
+
+        if( numberCount == 3 )
+        {
+            goes[0].transform.Translate( new Vector3(-0.01f*(numbers[0].rect.width + numbers[1].rect.width / 2), 0, 0) );
+            goes[2].transform.Translate( new Vector3(0.01f*(numbers[2].rect.width + numbers[1].rect.width / 2), 0, 0) );
+        }
+        else if( numberCount == 2 )
+        {
+            goes[0].transform.Translate( new Vector3(-0.01f*(numbers[0].rect.width / 2), 0, 0) );
+            goes[1].transform.Translate( new Vector3(0.01f*(numbers[1].rect.width / 2), 0, 0) );
+        }
     }
-
-
-
-
 }

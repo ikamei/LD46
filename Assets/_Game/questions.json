@@ -1,0 +1,135 @@
+{
+	"questions":[
+		{
+			"question": "What are your greatest strengths?",
+			"answers": [
+				{
+					"answer": "I... team work,,,I guess?",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "I m always constantly perfecting my professional skill",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "THE STRENGTH TO OVERCOME ANY CREATURE ON THIS PLANET!",
+					"cost": 10,
+					"score": 10
+				}
+			]
+		},
+		{
+			"question": "Why do you want to work here?",
+			"answers": [
+				{
+					"answer": "rly need to pay the bill…ASAP!",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "the realization of my self-worth ?",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "I DO NOT WANT WORK HERE ! YOU WANT ME WORK HERE!",
+					"cost": 10,
+					"score": 10
+				}
+			]
+		},
+		{
+			"question": "What about your ability to work under pressure?",
+			"answers": [
+				{
+					"answer": "to be honest sometimes I can be a little overreac…",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "Pretty well I guess?",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "I ONLY CARE ABOUT SOMEONE’S SKULL UNDER PRESSURE WHEN I AM PUNCHING",
+					"cost": 10,
+					"score": 10
+				}
+			]
+
+		},
+		{
+			"question": "Are you willing to work overtime?",
+			"answers": [
+				{
+					"answer": "yes ! As long as you pay me",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "Rly depnds",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "ARE YOU WILLING TO SAY HELLO TO MY MIGHTY FISTS?",
+					"cost": 10,
+					"score": 10
+				}
+			]
+		},
+		{
+			"question": "What have you learned from mistakes on the job?",
+			"answers": [
+				{
+					"answer": "Eh, Don’t do it again?",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "Only team work makes perfect!",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "I DO NOT LEARN FROM MISTAKES , I LEARN FROM THE SCREAM OF MY ENEMY!",
+					"cost": 10,
+					"score": 10
+				}
+			]
+		},
+		{
+			"question": "Image your position in the wolfpack?",
+			"answers": [
+				{
+					"answer": "I guess I will be the obedient good boy?",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "Beta wolf who can be trusted",
+					"cost": 10,
+					"score": 10
+				},
+				{
+					"answer": "I AM THE HUNTER WHO KILL WOLVES ALIVE AND WEAR THEIR SKIN BEFORE THEIR KIDS!",
+					"cost": 10,
+					"score": 10
+				}
+			]
+		},
+		{
+			"question": "What Is Your Dream Job?",
+			"answers": [
+				{
+					"answer": "two-day weekend oh! And…Double pay at the end of year?",
+					"cost": 10,
+					"score": 10
+				}
+			]
+		}
+	]
+}

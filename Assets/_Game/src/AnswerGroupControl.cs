@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class AnswerGroupController : MonoBehaviour
+public class AnswerGroupControl : MonoBehaviour
 {
-    AnswerController[] answersCtrl;
+    AnswerGUIControl[] answersCtrl;
 
     // Start is called before the first frame update
     void Start()
     {
-        answersCtrl = GetComponentsInChildren<AnswerController>();
+        answersCtrl = GetComponentsInChildren<AnswerGUIControl>();
         Debug.Log($"count: {answersCtrl.Length}");
     }
 

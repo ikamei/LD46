@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class QuestionController : MonoBehaviour
+public class QuestionControl : MonoBehaviour
 {
     public TextAsset data;
     public AudioClip unableToAnswerSFX;
@@ -14,7 +14,7 @@ public class QuestionController : MonoBehaviour
     public FloatValue currentInterviewScore;
 
     public TextMeshProUGUI questionText;
-    public AnswerGroupController answersGroup;
+    public AnswerGroupControl answersGroup;
 
     List<Question> questions;
     List<Answer> currentAnswers;
@@ -51,12 +51,14 @@ public class QuestionController : MonoBehaviour
         {
             if (currentAnswers[i].cost <= mengNan)
             {
+                Debug.Log($"execute answer: {currentAnswers[i].answer}");
                 currentAnswers[i].Execute(currentMengNanValue, currentInterviewScore);
                 audioSource.clip = unableToAnswerSFX;
                 audioSource.Play();
                 return;
             }
         }
+        Debug.Log($"unable to execute answer");
         audioSource.clip = answerSFX;
         audioSource.Play();
     }
@@ -108,8 +110,8 @@ public class Question
 public class Answer
 {
     public string answer;
-    public float cost;
-    public float score;
+    public int cost;
+    public int score;
 
     public void Execute(MengNanValue mengNanValue, FloatValue interviewScore)
     {

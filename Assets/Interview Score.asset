@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: InterviewScore
-  m_EditorClassIdentifier: Assembly-CSharp::FloatValue
-  value: 0
+  m_Script: {fileID: 11500000, guid: d83ac348cde19544f97843ca748a9f12, type: 3}
+  m_Name: Interview Score
+  m_EditorClassIdentifier: 
+  value: 23.85

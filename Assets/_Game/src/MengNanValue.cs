@@ -6,6 +6,9 @@ using System;
 using System.IO;
 
 public class MengNanValue : MonoBehaviour {
+    
+    // for inspector debug
+    [SerializeField]
     int m_value;
     List<Sprite> m_numbers;
     void Start()

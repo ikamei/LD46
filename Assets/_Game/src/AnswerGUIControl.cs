@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class AnswerController : MonoBehaviour
+public class AnswerGUIControl : MonoBehaviour
 {
     public TextMeshProUGUI answerText;
     public TextMeshProUGUI costText;

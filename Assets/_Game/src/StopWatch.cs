@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 
+[Serializable]
 public class StopWatch : MonoBehaviour {
     System.DateTime m_start_tick;
     bool m_stopwatch;
@@ -48,6 +49,19 @@ public class StopWatch : MonoBehaviour {
 
     public void TimeOut()
     {
+        if(false)
+        {
+            GameObject mengnan_value = GameObject.Find("MengNanValue");
+            MengNanValue mengnan_component = mengnan_value.GetComponent<MengNanValue>();
+            int value = mengnan_component.GetValue();
+            mengnan_component.SetValue(value-10);
+        }
+
+        {
+            GameObject go = GameObject.Find("Question Panel");
+            QuestionController component = go.GetComponent<QuestionController>();
+            component.AskQuestion();
+        }
     }
     
     void Update()

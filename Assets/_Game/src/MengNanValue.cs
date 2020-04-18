@@ -21,7 +21,7 @@ public class MengNanValue : MonoBehaviour {
             m_numbers.Add( Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f) );
         }
 
-        SetValue(189);
+        SetValue(100);
     }
 
     public int GetValue()
@@ -73,6 +73,12 @@ public class MengNanValue : MonoBehaviour {
             int idx = m_value;
             numbers.Add( UnityEngine.Object.Instantiate(m_numbers[idx]) );
         }
+
+        foreach (Transform child in gameObject.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
 
         GameObject middle = new GameObject();
         middle.transform.localPosition = new Vector3(0,0,0);

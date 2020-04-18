@@ -24,11 +24,11 @@ public class GUIStartPage : MonoBehaviour {
     
     void OnStartButtonClick()
     {
-        game_controller.SetState( GameController.STATE_LOADING );
+        game_controller.SetState( GameController.STATE_INTRO );
     }
 
     void OnExitButtonClick()
     {
-        Application.Quit();        
+        Application.Quit(); 
     }
 }

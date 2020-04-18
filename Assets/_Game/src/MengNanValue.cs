@@ -74,30 +74,33 @@ public class MengNanValue : MonoBehaviour {
             numbers.Add( UnityEngine.Object.Instantiate(m_numbers[idx]) );
         }
 
+        GameObject middle = new GameObject();
+        middle.transform.parent = gameObject.transform;
+
         List<GameObject> goes = new List<GameObject>();
         for( int j=0; j<numbers.Count; ++j )
         {
             GameObject go = new GameObject();
+            go.transform.localScale = new Vector3(100,100,100);
             goes.Add( go );
             SpriteRenderer renderer = go.AddComponent<SpriteRenderer>();
             // renderer.enabled = 1==is_enable;
-            // renderer.sortingOrder = scn_sprite_renderable_component_get_order_in_layer( component_object );
-            // renderer.sortingLayerName = IntPtrToString( scn_sprite_renderable_component_get_sorting_layer( component_object ));
+            renderer.sortingOrder = 1;
             renderer.sprite = numbers[j];
-            go.transform.parent = gameObject.transform;
+            go.transform.parent = middle.transform;
         }
         // Debug.Log( "numbers[0].textureRect.width = " + numbers[0].textureRect.width );
         // Debug.Log( "numbers[0].rect.width = " + numbers[0].rect.width );
 
         if( numberCount == 3 )
         {
-            goes[0].transform.Translate( new Vector3(-0.01f*(numbers[0].rect.width + numbers[1].rect.width / 2), 0, 0) );
-            goes[2].transform.Translate( new Vector3(0.01f*(numbers[2].rect.width + numbers[1].rect.width / 2), 0, 0) );
+            goes[0].transform.Translate( new Vector3(-1f*(numbers[0].rect.width + numbers[1].rect.width / 2), 0, 0) );
+            goes[2].transform.Translate( new Vector3(1f*(numbers[2].rect.width + numbers[1].rect.width / 2), 0, 0) );
         }
         else if( numberCount == 2 )
         {
-            goes[0].transform.Translate( new Vector3(-0.01f*(numbers[0].rect.width / 2), 0, 0) );
-            goes[1].transform.Translate( new Vector3(0.01f*(numbers[1].rect.width / 2), 0, 0) );
+            goes[0].transform.Translate( new Vector3(-1f*(numbers[0].rect.width / 2), 0, 0) );
+            goes[1].transform.Translate( new Vector3(1f*(numbers[1].rect.width / 2), 0, 0) );
         }
     }
 }

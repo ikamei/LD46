@@ -116,7 +116,7 @@ public class Answer
     public void Execute(MengNanValue mengNanValue, FloatValue interviewScore)
     {
         var mengNan = mengNanValue.GetValue();
-        mengNanValue.SetValue(mengNan - cost);
+        mengNanValue.SetValue((int)(mengNan - cost));
         interviewScore.value += score;
     }
 }

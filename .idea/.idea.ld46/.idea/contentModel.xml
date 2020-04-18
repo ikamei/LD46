@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\geral\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\geral\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_ld46.-1820607920.00" t="ExcludeRecursive" />
+    <e p="C:\Users\geral\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_LD46.-1820607920.01" t="ExcludeRecursive" />
     <e p="D:\_unity\ld46" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -10,6 +10,8 @@
           <e p="src" t="Include">
             <e p="AnswerController.cs" t="Include" />
             <e p="AnswerGroupController.cs" t="Include" />
+            <e p="GlobalFloatValue.cs" t="Include" />
+            <e p="MengNanValue.cs" t="Include" />
             <e p="QuestionController.cs" t="Include" />
           </e>
         </e>

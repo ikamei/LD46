@@ -4,7 +4,7 @@ using UnityEngine;
 public class AnswerGroupController : MonoBehaviour
 {
     AnswerController[] answersCtrl;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,13 +12,13 @@ public class AnswerGroupController : MonoBehaviour
         Debug.Log($"count: {answersCtrl.Length}");
     }
 
-    public void UpdateAnswers(List<Answer> answers)
+    public void UpdateAnswers(List<Answer> newAnswers)
     {
         for (var i = 0; i < answersCtrl.Length; ++i)
         {
-            if (i < answers.Count)
+            if (i < newAnswers.Count)
             {
-                answersCtrl[i].UpdateText(answers[i].answer, answers[i].cost);
+                answersCtrl[i].UpdateText(newAnswers[i].answer, newAnswers[i].cost);
             }
             else
             {

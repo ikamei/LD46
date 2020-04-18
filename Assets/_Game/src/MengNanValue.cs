@@ -8,11 +8,12 @@ using System.IO;
 public class MengNanValue : MonoBehaviour {
     double value;
     
-    double GetValue()
+    public double GetValue()
     {
         return value;
     }
-    void SetValue(double _value)
+
+    public void SetValue(double _value)
     {
         value = _value;
     }

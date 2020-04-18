@@ -25,9 +25,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5764f271-9989-48eb-8423-53950f20e193" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/main_scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/main_scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/src/AnswerGroupController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/src/AnswerGroupController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/src/MengNanValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/src/MengNanValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/src/QuestionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/src/QuestionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LD46.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LD46.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +44,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/_Game/src/QuestionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/src/AnswerGroupController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/scripts/GUIStartPage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/questions.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/src/QuestionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/src/MengNanValue.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -50,8 +59,10 @@
         <option value="$PROJECT_DIR$/Assets/_Game/questions.yaml" />
         <option value="$PROJECT_DIR$/Assets/AnswerController.cs" />
         <option value="$PROJECT_DIR$/Assets/AnswerGroupController.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Game/src/QuestionController.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/src/AnswerGroupController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/src/MengNanValue.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/src/QuestionController.cs" />
       </list>
     </option>
   </component>
@@ -94,6 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587206645721</updated>
       <workItem from="1587206657396" duration="8008000" />
+      <workItem from="1587219179594" duration="1505000" />
     </task>
     <servers />
   </component>
@@ -109,8 +121,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1151" y="432" width="672" height="678" key="search.everywhere.popup" timestamp="1587219810579">
+      <screen x="66" y="0" width="2494" height="1440" />
+    </state>
+    <state x="1151" y="432" width="672" height="678" key="search.everywhere.popup/66.0.2494.1440/2624.0.1016.1920@66.0.2494.1440" timestamp="1587219810579" />
   </component>
 </project>

@@ -24,7 +24,7 @@ public class GUIStartPage : MonoBehaviour {
     
     void OnStartButtonClick()
     {
-        game_controller.SetState( GameController.STATE_INTRO );
+        game_controller.SetState( GameController.STATE_GAMING );
     }
 
     void OnExitButtonClick()

@@ -1,8 +1,5 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using System;
-using System.IO;
 
 public class GameController : MonoBehaviour {
     public const int STATE_START   = 0;
@@ -39,10 +36,18 @@ public class GameController : MonoBehaviour {
         for( int j=0; j<pages_goes.Count; ++j )
             pages_goes[j].active = false;
         pages_goes[STATE_START].active = true;
+        ResetRect(pages_goes[STATE_START]);
     }
 
     void Update()
     {
+    }
+
+    void ResetRect(GameObject view)
+    {
+        Debug.Log("rect reset");
+        var rect = view.GetComponent<RectTransform>();
+        rect.anchoredPosition = Vector2.zero;
     }
 
     public void SetState( int state )
@@ -57,6 +62,7 @@ public class GameController : MonoBehaviour {
                 for( int j=0; j<pages_goes.Count; ++j )
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
+                ResetRect(pages_goes[state]);
             }
         }
         else if( STATE_INTRO == current_state )
@@ -66,6 +72,7 @@ public class GameController : MonoBehaviour {
                 for( int j=0; j<pages_goes.Count; ++j )
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
+                ResetRect(pages_goes[state]);
             }
         }
         else if( STATE_LOADING == current_state )
@@ -75,6 +82,7 @@ public class GameController : MonoBehaviour {
                 for( int j=0; j<pages_goes.Count; ++j )
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
+                ResetRect(pages_goes[state]);
             }
         }
         else if( STATE_GAMING == current_state )
@@ -84,6 +92,7 @@ public class GameController : MonoBehaviour {
                 for( int j=0; j<pages_goes.Count; ++j )
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
+                ResetRect(pages_goes[state]);
             }
         }
         else if( STATE_RESTART == current_state )
@@ -93,6 +102,7 @@ public class GameController : MonoBehaviour {
                 for( int j=0; j<pages_goes.Count; ++j )
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
+                ResetRect(pages_goes[state]);
             }
         }
         current_state = state;        

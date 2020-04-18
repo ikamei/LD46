@@ -29,7 +29,7 @@ public class QuestionController : MonoBehaviour
         questions = parsed.questions;
     }
 
-    void AskQuestion()
+    public void AskQuestion()
     {
         var question = Pick();
         UpdateGUI(question);

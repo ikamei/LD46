@@ -8,9 +8,9 @@ using System.IO;
 public class StopWatch : MonoBehaviour {
     System.DateTime m_start_tick;
     bool m_stopwatch;
-    const int m_precision = 240;
+    const int m_precision = 100;
     int m_count = m_precision;
-    int m_time_elapse = 250;
+    int m_time_elapse = 100;
     List<GameObject> m_gears;
     void Start()
     {
@@ -58,6 +58,7 @@ public class StopWatch : MonoBehaviour {
         }
         if( m_count <= 0 )
         {
+            TimeOut();
             StopTheWatch();
         }
         System.TimeSpan span = System.DateTime.Now - m_start_tick;
@@ -69,10 +70,12 @@ public class StopWatch : MonoBehaviour {
         }
     }
 
+
     void updateGUI()
     {
-        double angle = (m_count-m_precision) * m_time_elapse / 1000.0;// * Math.PI / 180;
-        angle *= 6;
+        double time_total = m_precision * m_time_elapse;
+        double time_elapse = (m_count-m_precision) * m_time_elapse;
+        double angle = 360 * time_elapse / time_total;
         m_gears[1].transform.localRotation = Quaternion.Euler(0, 0, (float)angle);
     }
 }

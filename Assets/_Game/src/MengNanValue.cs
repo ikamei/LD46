@@ -8,7 +8,7 @@ using System.IO;
 public class MengNanValue : MonoBehaviour {
     
     // for inspector debug
-    [SerializeField]
+    //[SerializeField]
     int m_value;
     List<Sprite> m_numbers;
     void Start()
@@ -75,8 +75,10 @@ public class MengNanValue : MonoBehaviour {
         }
 
         GameObject middle = new GameObject();
-        middle.transform.parent = gameObject.transform;
-
+        middle.transform.localPosition = new Vector3(0,0,0);
+        // middle.transform.position = new Vector3(0,0,0);
+        middle.transform.SetParent(gameObject.transform,false);
+        // Debug.Log( "name = " + middle.name+ "middle.transform.localPosition0 = " + middle.transform.localPosition );
         List<GameObject> goes = new List<GameObject>();
         for( int j=0; j<numbers.Count; ++j )
         {
@@ -87,7 +89,7 @@ public class MengNanValue : MonoBehaviour {
             // renderer.enabled = 1==is_enable;
             renderer.sortingOrder = 1;
             renderer.sprite = numbers[j];
-            go.transform.parent = middle.transform;
+            go.transform.SetParent(middle.transform,false);
         }
         // Debug.Log( "numbers[0].textureRect.width = " + numbers[0].textureRect.width );
         // Debug.Log( "numbers[0].rect.width = " + numbers[0].rect.width );
@@ -102,5 +104,8 @@ public class MengNanValue : MonoBehaviour {
             goes[0].transform.Translate( new Vector3(-1f*(numbers[0].rect.width / 2), 0, 0) );
             goes[1].transform.Translate( new Vector3(1f*(numbers[1].rect.width / 2), 0, 0) );
         }
+
+        // Debug.Log( "middle.transform.localPosition = " + middle.transform.localPosition );
+        // Debug.Log( "middle.transform.position = " + middle.transform.position );
     }
 }

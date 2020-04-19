@@ -5,14 +5,13 @@ using System;
 [Serializable]
 public class StopWatch : MonoBehaviour
 {
-    public QuestionController questionCtrl;
-    public FloatValue currentInterviewScore;
     System.DateTime m_start_tick;
     bool m_stopwatch;
     const int m_precision = 100;
     int m_count = m_precision;
     int m_time_elapse = 100;
     List<GameObject> m_gears;
+    MasterAI m_master_ai;
     
     void Start()
     {
@@ -33,8 +32,10 @@ public class StopWatch : MonoBehaviour
             go.transform.SetParent(middle.transform,false);
             m_gears.Add( go );
         }
-        questionCtrl.AskQuestion();
-        StartTheWatch();
+        //questionCtrl.AskQuestion();
+        GameObject master_go = GameObject.Find("Master");
+        m_master_ai = master_go.GetComponent<MasterAI>();
+        //StartTheWatch();
     }
 
     public void StartTheWatch()
@@ -60,14 +61,13 @@ public class StopWatch : MonoBehaviour
         }
 
         {
-            Debug.Log("it should ask next question");
-            
+            // Debug.Log("it should ask next question");
             // GameObject go = GameObject.Find("Question Panel");
             // 使用 GameObject.Find 有可能找到的是 prefab，而非场景中的对象
-            QuestionController component = questionCtrl;
-            component.AskQuestion();
-            currentInterviewScore.value -= 10;
-            StartTheWatch();
+            m_master_ai.set_state( MyConst.ACTION_STATE_ANSWER_TIMEOUT );
+            // QuestionController component = questionCtrl;
+            // component.AskQuestion();
+            //StartTheWatch();
         }
     }
     

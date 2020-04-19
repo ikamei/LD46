@@ -12,6 +12,7 @@ public class QuestionController : MonoBehaviour
     public AudioSource audioSource;
     public MengNanValue currentMengNanValue;
     public FloatValue currentInterviewScore;
+    public StopWatch stopWatch;
 
     public TextMeshProUGUI questionText;
     public AnswerGroupControl answersGroup;
@@ -28,19 +29,19 @@ public class QuestionController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            SelectAnswer(1);
+            SelectAnswer(0);
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            SelectAnswer(2);
+            SelectAnswer(1);
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            SelectAnswer(3);
+            SelectAnswer(2);
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            SelectAnswer(4);
+            SelectAnswer(3);
         }
     }
 
@@ -55,6 +56,12 @@ public class QuestionController : MonoBehaviour
                 currentAnswers[i].Execute(currentMengNanValue, currentInterviewScore);
                 audioSource.clip = unableToAnswerSFX;
                 audioSource.Play();
+                
+                // next question
+                Debug.Log("ask next question when answer");
+                stopWatch.StartTheWatch();
+                AskQuestion();
+                
                 return;
             }
         }
@@ -76,6 +83,7 @@ public class QuestionController : MonoBehaviour
 
     public void AskQuestion()
     {
+        Debug.Log("question asked");
         var question = Pick();
         currentAnswers = question.answers;
         UpdateGUI(question);

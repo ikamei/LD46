@@ -677,6 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1cf65be32d82448ab26ef4d61d0e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questionCtrl: {fileID: 1805212863}
   currentInterviewScore: {fileID: 11400000, guid: d7e08355f4ac5174fb853fb7830c16fb,
     type: 2}
 --- !u!1 &923095773
@@ -1766,7 +1767,12 @@ PrefabInstance:
         type: 3}
       propertyPath: currentMengNanValue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2142883684}
+    - target: {fileID: 5521834319562774409, guid: 768e6b2bad6cce349b2e0fa4885840a2,
+        type: 3}
+      propertyPath: stopWatch
+      value: 
+      objectReference: {fileID: 469401102}
     - target: {fileID: 5521834319562774411, guid: 768e6b2bad6cce349b2e0fa4885840a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2425,6 +2431,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734946822}
   m_CullTransparentMesh: 0
+--- !u!114 &1805212863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5521834319562774409, guid: 768e6b2bad6cce349b2e0fa4885840a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1523542310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6d1affdb0deb24da48960ac3830cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1886395272
 GameObject:
   m_ObjectHideFlags: 0

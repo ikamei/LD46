@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using System.Collections.Generic;
 using System;
-using System.IO;
 
 [Serializable]
-public class StopWatch : MonoBehaviour {
+public class StopWatch : MonoBehaviour
+{
+    public QuestionController questionCtrl;
     public FloatValue currentInterviewScore;
     System.DateTime m_start_tick;
     bool m_stopwatch;
@@ -14,6 +13,7 @@ public class StopWatch : MonoBehaviour {
     int m_count = m_precision;
     int m_time_elapse = 100;
     List<GameObject> m_gears;
+    
     void Start()
     {
         m_gears = new List<GameObject>();
@@ -33,6 +33,7 @@ public class StopWatch : MonoBehaviour {
             go.transform.SetParent(middle.transform,false);
             m_gears.Add( go );
         }
+        questionCtrl.AskQuestion();
         StartTheWatch();
     }
 
@@ -59,10 +60,14 @@ public class StopWatch : MonoBehaviour {
         }
 
         {
-            GameObject go = GameObject.Find("Question Panel");
-            QuestionController component = go.GetComponent<QuestionController>();
+            Debug.Log("it should ask next question");
+            
+            // GameObject go = GameObject.Find("Question Panel");
+            // 使用 GameObject.Find 有可能找到的是 prefab，而非场景中的对象
+            QuestionController component = questionCtrl;
             component.AskQuestion();
             currentInterviewScore.value -= 10;
+            StartTheWatch();
         }
     }
     
@@ -74,9 +79,10 @@ public class StopWatch : MonoBehaviour {
         }
         if( m_count <= 0 )
         {
-            TimeOut();
             StopTheWatch();
+            TimeOut();
         }
+        
         System.TimeSpan span = System.DateTime.Now - m_start_tick;
         if( span.TotalMilliseconds > m_time_elapse )
         {

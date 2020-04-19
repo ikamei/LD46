@@ -2016,7 +2016,6 @@ GameObject:
   - component: {fileID: 5521834319562774410}
   - component: {fileID: 5521834319562774409}
   - component: {fileID: 2333121096478504864}
-  - component: {fileID: 114969032917001570}
   m_Layer: 5
   m_Name: Question Panel
   m_TagString: Untagged
@@ -2185,19 +2184,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114969032917001570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5521834319562774412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3beb2f696b9b9c243ae3937419b84e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hello: "\u4F60\u597D\u5417"
 --- !u!1 &5521834320027316037
 GameObject:
   m_ObjectHideFlags: 0

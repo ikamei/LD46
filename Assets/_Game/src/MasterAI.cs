@@ -15,6 +15,8 @@ public class MasterAI : MonoBehaviour
     Animator m_master_animator;
     MengNanValue m_mengnan_value;
     GameController m_game_controller;
+    bool m_is_machor;
+
     void Start()
     {
         m_before_event_callback_enable = false;
@@ -28,12 +30,13 @@ public class MasterAI : MonoBehaviour
         m_mengnan_value = go.GetComponent<MengNanValue>();
         go = GameObject.Find("GameController");
         m_game_controller = go.GetComponent<GameController>();
-
+        
         round_start();
     }
 
     public void round_start()
     {
+        m_is_machor = true;
         current_state = MyConst.ACTION_STATE_UNKNOWN;
         set_state( MyConst.ACTION_STATE_ASK_QUESTION );
         currentInterviewScore.value = initialInterviewScore;
@@ -193,6 +196,18 @@ public class MasterAI : MonoBehaviour
         }
         currentInterviewScore.value += (float)delta;
 
+    }
+    public int score()
+    {
+        return (int)currentInterviewScore.value;
+    }
+    public void set_isMacho( bool v )
+    {
+        m_is_machor = false;
+    }
+    public bool isMacho()
+    {
+        return m_is_machor;
     }
 
 }

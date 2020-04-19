@@ -112,6 +112,8 @@ public class QuestionController : MonoBehaviour
                 
                 m_master_ai.incr_mengnan_value( -1 * currentAnswers[i].cost );
                 m_master_ai.incr_score( currentAnswers[i].score );
+                if( false == currentAnswers[i].isMacho )
+                    m_master_ai.set_isMacho( false );
                 // m_master_ai.incr_score( -100 );
                 if( 0 == currentAnswers[i].reaction )
                 {

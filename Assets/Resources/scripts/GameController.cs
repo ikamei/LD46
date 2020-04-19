@@ -112,6 +112,9 @@ public class GameController : MonoBehaviour {
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
+                GameObject go = GameObject.Find("RestartPageBackground");
+                ScoreRank sr = go.GetComponent<ScoreRank>();
+                sr.updateGUI();
             }
         }
         else if( STATE_RESTART == current_state )

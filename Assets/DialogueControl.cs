@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -31,13 +32,23 @@ public class DialogueControl : MonoBehaviour
         idle = false;
         for (var i = 0; i < text.Length + 1; ++i)
         {
-            if (!text.EndsWith(" "))
+            var displayText = text.Substring(0, i);
+            if (i < text.Length)
             {
-                Debug.Log("word break");
-                audioSource.Play();
+                var lastCharacter = text.Substring(i, 1);
+                Debug.Log($"last character: {lastCharacter}, {lastCharacter.Trim().Length}");
+                if (lastCharacter.Trim().Length != 0)
+                {
+                    audioSource.Play();
+                }
+                else
+                {
+                    Debug.Log("word break");
+                }
             }
+            
 
-            textControl.text = text.Substring(0, i);
+            textControl.text = displayText;
             yield return new WaitForSeconds(characterSpeed);
         }
         currentCoroutine = null;

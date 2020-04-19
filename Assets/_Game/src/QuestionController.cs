@@ -38,22 +38,26 @@ public class QuestionController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (questionDialog.idle)
         {
-            SelectAnswer(0);
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                SelectAnswer(0);
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+                SelectAnswer(1);
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                SelectAnswer(2);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                SelectAnswer(3);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            SelectAnswer(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            SelectAnswer(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            SelectAnswer(3);
-        }
+
         System.TimeSpan span = System.DateTime.Now - m_start_tick;
         if( null==m_master_animator )
         {

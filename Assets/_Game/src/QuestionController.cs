@@ -103,7 +103,7 @@ public class QuestionController : MonoBehaviour
                 
                 m_start_tick = System.DateTime.Now;
                 m_next_action_state = MyConst.ACTION_STATE_ASK_QUESTION;
-                m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_REVIEW_ANSWER ); 
+                m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_MASTER_AGREE ); 
                 
                 return;
             }

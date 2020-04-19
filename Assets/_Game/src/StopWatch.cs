@@ -7,6 +7,7 @@ using System.IO;
 
 [Serializable]
 public class StopWatch : MonoBehaviour {
+    public FloatValue currentInterviewScore;
     System.DateTime m_start_tick;
     bool m_stopwatch;
     const int m_precision = 100;
@@ -61,6 +62,7 @@ public class StopWatch : MonoBehaviour {
             GameObject go = GameObject.Find("Question Panel");
             QuestionController component = go.GetComponent<QuestionController>();
             component.AskQuestion();
+            currentInterviewScore.value -= 10;
         }
     }
     

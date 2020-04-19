@@ -15,12 +15,6 @@ public class DialogueControl : MonoBehaviour
 
     Coroutine currentCoroutine;
 
-    void OnGUI()
-    {
-        if (GUILayout.Button("show text"))
-            ShowText("hello world");
-    }
-
     public void ShowText(string text)
     {
         if (currentCoroutine != null) StopCoroutine(currentCoroutine);

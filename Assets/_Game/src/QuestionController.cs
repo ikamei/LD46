@@ -179,7 +179,7 @@ public class Answer
     public void Execute(MengNanValue mengNanValue, FloatValue interviewScore)
     {
         var mengNan = mengNanValue.GetValue();
-        mengNanValue.SetValue((int)(mengNan - cost));
+        mengNanValue.SetValue(mengNan - cost);
         interviewScore.value += score;
     }
 }

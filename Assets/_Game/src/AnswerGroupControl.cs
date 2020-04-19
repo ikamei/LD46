@@ -6,10 +6,11 @@ public class AnswerGroupControl : MonoBehaviour
     AnswerGUIControl[] answersCtrl;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Debug.Log("Answer group start");
         answersCtrl = GetComponentsInChildren<AnswerGUIControl>();
-        Debug.Log($"count: {answersCtrl.Length}");
+        Debug.Log($"max answer count: {answersCtrl.Length}");
     }
 
     public void UpdateAnswers(List<Answer> newAnswers)

@@ -891,6 +891,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: -749.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6288149714765639983, guid: 80456854bac522c488441cb91de978a9,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6288149714838617671, guid: 80456854bac522c488441cb91de978a9,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1195,6 +1200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentInterviewScore: {fileID: 11400000, guid: d7e08355f4ac5174fb853fb7830c16fb,
     type: 2}
+  initialInterviewScore: 40
 --- !u!1 &1105466729
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,7 @@ public class FightingGame : MonoBehaviour
 
     public void RoundWin()
     {
+        dialogueControl.gameObject.SetActive(false);
         countdown.Terminate();
         animator.SetTrigger("win");
         audioSource.clip = winSFX;
@@ -39,7 +40,6 @@ public class FightingGame : MonoBehaviour
 
     public void RoundLose()
     {
-        dialogueControl.gameObject.SetActive(false);
         sequenceControl.Clear();
         animator.SetTrigger("lose");
         countdown.Terminate();

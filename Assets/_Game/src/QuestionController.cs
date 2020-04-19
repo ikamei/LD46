@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,13 +14,12 @@ public class QuestionController : MonoBehaviour
     public FloatValue currentInterviewScore;
     public StopWatch stopWatch;
 
-    public TextMeshProUGUI questionText;
+    public DialogueControl questionDialog;
     public AnswerGroupControl answersGroup;
 
     [SerializeField]
     List<Question> questions;
     List<Answer> currentAnswers;
-    // Animator m_master_animator;        
     System.DateTime m_start_tick;
     // System.DateTime m_start_answer_tick;
     Animator m_master_animator = null;
@@ -35,12 +34,6 @@ public class QuestionController : MonoBehaviour
             m_master_animator = master_go.GetComponentInChildren<Animator>();
         }
         Parse();
-    }
-
-    void Start()
-    {
-        // GameObject master_go = GameObject.Find("Master");
-        // m_master_animator = master_go.GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -126,19 +119,29 @@ public class QuestionController : MonoBehaviour
 
     public void AskQuestion()
     {
+        answersGroup.gameObject.SetActive(false);
+        
         Debug.Log("question asked");
         var question = Pick();
         currentAnswers = question.answers;
         UpdateGUI(question);
+
+        StartCoroutine(WaitQuestion());
 
         m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_ASK_QUESTION );
         m_start_tick = System.DateTime.Now;
         m_next_action_state = MyConst.ACTION_STATE_WAIT_QUESTION;
     }
 
+    IEnumerator WaitQuestion()
+    {
+        while (questionDialog.idle == false) yield return null;
+        answersGroup.gameObject.SetActive(true);
+    }
+
     void UpdateGUI(Question question)
     {
-        questionText.text = question.question;
+        questionDialog.ShowText(question.question);
         answersGroup.UpdateAnswers(question.answers);
     }
 

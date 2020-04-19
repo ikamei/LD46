@@ -4,10 +4,12 @@ using UnityEngine.UI;
 public class InterviewScoreGUIControl : MonoBehaviour
 {
     public FloatValue value;
-    public Slider slider;
+    public Image slider;
+
+    public int maxValue;
     
     void Update()
     {
-        slider.value = value.value;
+        slider.fillAmount = value.value / maxValue;
     }
 }

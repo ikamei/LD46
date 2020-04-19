@@ -29,14 +29,14 @@ public class DialogueControl : MonoBehaviour
             if (i < text.Length)
             {
                 var lastCharacter = text.Substring(i, 1);
-                Debug.Log($"last character: {lastCharacter}, {lastCharacter.Trim().Length}");
+                // Debug.Log($"last character: {lastCharacter}, {lastCharacter.Trim().Length}");
                 if (lastCharacter.Trim().Length != 0)
                 {
                     audioSource.Play();
                 }
                 else
                 {
-                    Debug.Log("word break");
+                    //Debug.Log("word break");
                 }
             }
             textControl.text = displayText;

@@ -98,7 +98,7 @@ public class QuestionController : MonoBehaviour
             if (currentAnswers[i].cost <= mengNan)
             {
                 Debug.Log($"execute answer: {currentAnswers[i].answer}");
-                currentAnswers[i].Execute(currentMengNanValue, currentInterviewScore);
+                // currentAnswers[i].Execute(currentMengNanValue, currentInterviewScore);
                 audioSource.clip = unableToAnswerSFX;
                 audioSource.Play();
                 
@@ -197,11 +197,4 @@ public class Answer
     public int score;
     public int reaction;
     public bool isMacho;
-
-    public void Execute(MengNanValue mengNanValue, FloatValue interviewScore)
-    {
-        var mengNan = mengNanValue.GetValue();
-        mengNanValue.SetValue(mengNan - cost);
-        interviewScore.value += score;
-    }
 }

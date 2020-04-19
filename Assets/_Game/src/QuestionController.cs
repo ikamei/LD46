@@ -23,7 +23,8 @@ public class QuestionController : MonoBehaviour
     List<Answer> currentAnswers;
     // Animator m_master_animator;        
     System.DateTime m_start_tick;
-
+    System.DateTime m_start_answer_tick;
+    
     void Awake()
     {
         Parse();
@@ -58,6 +59,11 @@ public class QuestionController : MonoBehaviour
         {
             m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_WAIT_QUESTION );
         }
+        span = System.DateTime.Now - m_start_answer_tick;
+        if( span.TotalMilliseconds > 2000 )
+        {
+            m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_ASK_QUESTION );
+        }
     }
 
     void SelectAnswer(int i)
@@ -84,6 +90,7 @@ public class QuestionController : MonoBehaviour
         audioSource.clip = answerSFX;
         audioSource.Play();
 
+        m_start_answer_tick = System.DateTime.Now;
         m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_REVIEW_ANSWER ); 
     }
 

@@ -13,21 +13,26 @@ public class QuestionController : MonoBehaviour
     public MengNanValue currentMengNanValue;
     public FloatValue currentInterviewScore;
     public StopWatch stopWatch;
+    public Animator m_master_animator;
 
     public TextMeshProUGUI questionText;
     public AnswerGroupControl answersGroup;
 
+    [SerializeField]
     List<Question> questions;
     List<Answer> currentAnswers;
-    Animator m_master_animator;        
+    // Animator m_master_animator;        
     System.DateTime m_start_tick;
-    
-    void Start()
+
+    void Awake()
     {
         Parse();
+    }
 
-        GameObject master_go = GameObject.Find("Master");
-        m_master_animator = master_go.GetComponentInChildren<Animator>();
+    void Start()
+    {
+        // GameObject master_go = GameObject.Find("Master");
+        // m_master_animator = master_go.GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -82,13 +87,9 @@ public class QuestionController : MonoBehaviour
         m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_REVIEW_ANSWER ); 
     }
 
-    void OnGUI() {
-        if (GUILayout.Button("Ask Question"))
-            AskQuestion();
-    }
-
     void Parse()
     {
+        // Debug.Log(data.text);
         var parsed = JsonUtility.FromJson<Questions>(data.text);
         questions = parsed.questions;
     }
@@ -112,6 +113,7 @@ public class QuestionController : MonoBehaviour
 
     Question Pick()
     {
+        Debug.Log($"{questions.Count}");
         return questions[Random.Range(0, questions.Count)];
     }
 }

@@ -9,16 +9,12 @@ public class FightingGame : MonoBehaviour
     public DialogueControl dialogueControl;
     public AudioSource audioSource;
 
+    public MengNanValue mengNanValue;
+    public int successScore = 20;
+    public int loseScore = 20;
+
     public AudioClip winSFX;
     public AudioClip loseSFX;
-    
-    void OnGUI()
-    {
-        if (GUILayout.Button("Game Start"))
-        {
-            RoundStart();
-        }
-    }
 
     public void RoundStart()
     {
@@ -35,7 +31,10 @@ public class FightingGame : MonoBehaviour
         animator.SetTrigger("win");
         audioSource.clip = winSFX;
         audioSource.Play();
-        StartCoroutine(WaitAndFireNextBank());
+        StartCoroutine(WaitAndFireNextRound());
+
+        var mengNan = mengNanValue.GetValue(); 
+        mengNanValue.SetValue(mengNan + successScore);
     }
 
     public void RoundLose()
@@ -45,10 +44,13 @@ public class FightingGame : MonoBehaviour
         countdown.Terminate();
         audioSource.clip = loseSFX;
         audioSource.Play();
-        StartCoroutine(WaitAndFireNextBank());
+        StartCoroutine(WaitAndFireNextRound());
+        
+        var mengNan = mengNanValue.GetValue(); 
+        mengNanValue.SetValue(mengNan - loseScore);
     }
     
-    IEnumerator WaitAndFireNextBank()
+    IEnumerator WaitAndFireNextRound()
     {
         yield return new WaitForSeconds(1f);
         RoundStart();

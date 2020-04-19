@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour {
     List<GameObject> pages_goes;
     MasterAI m_master_ai;
 
+    public FightingGame fightingGame;
+
     void Start()
     {
         GameObject master_go = GameObject.Find("Master");
@@ -67,6 +69,9 @@ public class GameController : MonoBehaviour {
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
+                
+                // game start
+                fightingGame.RoundStart();
             }
         }
         else if( STATE_INTRO == current_state )
@@ -77,6 +82,9 @@ public class GameController : MonoBehaviour {
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
+                
+                // game start
+                fightingGame.RoundStart();
             }
             // if( STATE_GAMING == state )
             // {
@@ -91,6 +99,9 @@ public class GameController : MonoBehaviour {
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
+                
+                // game start
+                fightingGame.RoundStart();
             }
         }
         else if( STATE_GAMING == current_state )

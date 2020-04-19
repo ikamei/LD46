@@ -22,6 +22,7 @@ public class StopWatch : MonoBehaviour
 
         GameObject middle = new GameObject();
         middle.transform.SetParent(gameObject.transform,false);
+        middle.transform.localScale = new Vector3(0.45f,0.45f,0.45f);
         for( int j=0; j<2; ++j )
         {
             GameObject go = new GameObject();

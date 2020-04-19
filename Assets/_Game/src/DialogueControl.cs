@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -40,8 +39,6 @@ public class DialogueControl : MonoBehaviour
                     Debug.Log("word break");
                 }
             }
-            
-
             textControl.text = displayText;
             yield return new WaitForSeconds(characterSpeed);
         }

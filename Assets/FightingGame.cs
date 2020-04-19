@@ -6,6 +6,7 @@ public class FightingGame : MonoBehaviour
     public Animator animator;
     public SequenceControl sequenceControl;
     public Countdown countdown;
+    public DialogueControl dialogueControl;
     public AudioSource audioSource;
 
     public AudioClip winSFX;
@@ -21,6 +22,8 @@ public class FightingGame : MonoBehaviour
 
     public void RoundStart()
     {
+        dialogueControl.gameObject.SetActive(true);
+        dialogueControl.ShowText("blah blah blah ...");
         countdown.StartCountdown();
         sequenceControl.CreateSequence();
     }
@@ -36,6 +39,7 @@ public class FightingGame : MonoBehaviour
 
     public void RoundLose()
     {
+        dialogueControl.gameObject.SetActive(false);
         sequenceControl.Clear();
         animator.SetTrigger("lose");
         countdown.Terminate();

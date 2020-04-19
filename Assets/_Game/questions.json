@@ -7,19 +7,22 @@
 					"answer": "I... team work... I guess?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "I m always constantly perfecting my professional skill",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": false
 				},
 				{
 					"answer": "THE STRENGTH TO OVERCOME ANY CREATURE ON THIS PLANET!",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": true
 				}
 			]
 		},
@@ -30,19 +33,22 @@
 					"answer": "rly need to pay the bill...ASAP!",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": false
 				},
 				{
 					"answer": "the realization of my self-worth?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "I DO NOT WANT WORK HERE! YOU WANT ME WORK HERE!",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": true
 				}
 			]
 		},
@@ -53,19 +59,22 @@
 					"answer": "to be honest sometimes I can be a little overreac...",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": false
 				},
 				{
 					"answer": "Pretty well I guess?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "I ONLY CARE ABOUT SOMEONE’S SKULL UNDER PRESSURE WHEN I AM PUNCHING",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": true
 				}
 			]
 
@@ -77,19 +86,22 @@
 					"answer": "yes! As long as you pay me",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "Rly depnds",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "ARE YOU WILLING TO SAY HELLO TO MY MIGHTY FISTS?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": true
 				}
 			]
 		},
@@ -100,19 +112,22 @@
 					"answer": "Eh, Don’t do it again?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "Only team work makes perfect!",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": false
 				},
 				{
 					"answer": "I DO NOT LEARN FROM MISTAKES, I LEARN FROM THE SCREAM OF MY ENEMY!",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": true
 				}
 			]
 		},
@@ -123,19 +138,22 @@
 					"answer": "I guess I will be the obedient good boy?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": false
 				},
 				{
 					"answer": "Beta wolf who can be trusted",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "I AM THE HUNTER WHO KILL WOLVES ALIVE AND WEAR THEIR SKIN BEFORE THEIR KIDS!",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": true
 				}
 			]
 		},
@@ -146,19 +164,22 @@
 					"answer": "two-day weekend oh! And ... Double pay at the end of year?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": false
 				},
 				{
 					"answer": "I rly don’t have any idea",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "SLAUGHTERING ALIENS ON DISTANT JUPITER AND SHOWERING WITH THEIR BLOOD!",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": true
 				}
 			]
 		},
@@ -169,19 +190,22 @@
 					"answer": "Pfff…I don’t know maybe start dating I guess?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": false
 				},
 				{
 					"answer": "Pay the bill , stay living and try not to freak out too often",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "I DON’T NEED 5 YEARS TO TAKE OVER THE WHOLE COMPANY",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": true
 				}
 			]
 		},
@@ -192,19 +216,22 @@
 					"answer": "I m not sure ... I m not rly good at philosophy u know ...",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": false
 				},
 				{
 					"answer": "Work Hard, Work Harder",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": false
 				},
 				{
 					"answer": "I KILL THE GUY WHOES NAME IS PHILOSOPHY AND MAKE A GOOD EXAMPLE",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": true
 				}
 			]
 		},
@@ -215,19 +242,22 @@
 					"answer": "Im kinda easy going person so...",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": false
 				},
 				{
 					"answer": "invasion of privacy",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "KEEP ASKING STUPID QUESTIONS",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": true
 				}
 			]
 		},
@@ -238,19 +268,22 @@
 					"answer": "Wow that’s a tough one",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "Of course! No Big O , No wages!",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": false
 				},
 				{
 					"answer": "ARE YOU WILLING TO PUT MY FIST BEFORE YOUR FOREHEAD?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 0
+					"reaction": 0,
+					"isMacho": true
 				}
 			]
 		},
@@ -261,19 +294,22 @@
 					"answer": "Pay the bill on time that’s all",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": false
 				},
 				{
 					"answer": "A people person would be rly nice",
 					"cost": 10,
 					"score": 10,
-					"reaction": 2
+					"reaction": 2,
+					"isMacho": false
 				},
 				{
 					"answer": "KNOWING WHAT TIME TO GIVE UP, ESPECIALLY WHEN I AM AROUND",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1
+					"reaction": 1,
+					"isMacho": true
 				}
 			]
 		}

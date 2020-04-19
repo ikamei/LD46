@@ -181,6 +181,7 @@ public class Answer
     public int cost;
     public int score;
     public int reaction;
+    public bool isMacho;
 
     public void Execute(MengNanValue mengNanValue, FloatValue interviewScore)
     {

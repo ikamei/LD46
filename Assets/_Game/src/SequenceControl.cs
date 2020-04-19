@@ -1,31 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static SequenceKeyControl;
 
 public class SequenceControl : MonoBehaviour
 {
     public int length;
-    public Countdown countdown;
     public SequenceKeyControl sequenceKeyPrefab;
-    public AudioClip successSFX;
-    public AudioClip successAllSFX;
-    public AudioClip failureSFX;
+    public AudioClip progressSFX;
     public AudioSource audioSource;
-
+    
+    public UnityEvent onSuccess, onFailure;
+    
     Queue<SequenceKeyControl> keys;
 
     void Awake()
     {
         keys = new Queue<SequenceKeyControl>();
-    }
-
-    void OnGUI()
-    {
-        if (GUILayout.Button("Create Sequence"))
-        {
-            CreateSequence();
-        }
     }
 
     void Update()
@@ -51,7 +42,6 @@ public class SequenceControl : MonoBehaviour
     public void CreateSequence()
     {
         Clear();
-        countdown.StartCountdown();
         for (var i = 0; i < length; ++i)
         {
             var key = Instantiate(sequenceKeyPrefab, transform);
@@ -65,50 +55,27 @@ public class SequenceControl : MonoBehaviour
         if (keys.Count == 0) return;
         if (dir == Peek())
         {
-            SuccessOne();
+            Progress();
         }
         else
         {
-            Fail();
+            onFailure?.Invoke();
         }
     }
 
-    public void Fail()
-    {
-        Clear();
-        countdown.Terminate();
-        audioSource.clip = failureSFX;
-        audioSource.Play();
-        StartCoroutine(WaitAndFireNextBank());
-    }
-
-    void SuccessOne()
+    void Progress()
     {
         var key = keys.Dequeue();
         Destroy(key.gameObject);
         if (keys.Count == 0)
         {
-            SuccessAll();
+            onSuccess?.Invoke();
         }
         else
         {
-            audioSource.clip = successSFX;
+            audioSource.clip = progressSFX;
             audioSource.Play();
         }
-    }
-
-    IEnumerator WaitAndFireNextBank()
-    {
-        yield return new WaitForSeconds(1f);
-        CreateSequence();
-    }
-
-    void SuccessAll()
-    {
-        countdown.Terminate();
-        audioSource.clip = successAllSFX;
-        audioSource.Play();
-        StartCoroutine(WaitAndFireNextBank());
     }
 
     Direction Peek()
@@ -117,7 +84,7 @@ public class SequenceControl : MonoBehaviour
         return key.value;
     }
 
-    void Clear()
+    public void Clear()
     {
         foreach (var key in keys)
         {

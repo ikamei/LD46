@@ -16,9 +16,13 @@ public class GameController : MonoBehaviour {
     GameObject restart_page_go;
 
     List<GameObject> pages_goes;
+    MasterAI m_master_ai;
 
     void Start()
     {
+        GameObject master_go = GameObject.Find("Master");
+        m_master_ai = master_go.GetComponent<MasterAI>();
+
         current_state = STATE_START;
         start_page_go   = GameObject.Find("StartPage");
         intro_page_go   = GameObject.Find("IntroPage");
@@ -74,6 +78,10 @@ public class GameController : MonoBehaviour {
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
             }
+            // if( STATE_GAMING == state )
+            // {
+            //     m_master_ai.round_start();
+            // }
         }
         else if( STATE_LOADING == current_state )
         {

@@ -28,6 +28,11 @@ public class MasterAI : MonoBehaviour
         go = GameObject.Find("GameController");
         m_game_controller = go.GetComponent<GameController>();
 
+        round_start();
+    }
+
+    public void round_start()
+    {
         current_state = MyConst.ACTION_STATE_UNKNOWN;
         set_state( MyConst.ACTION_STATE_ASK_QUESTION );
     }

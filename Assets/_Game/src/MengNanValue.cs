@@ -119,6 +119,7 @@ public class MengNanValue : MonoBehaviour {
             goes[0].transform.Translate( new Vector3(-1f*(numbers[0].rect.width / 2), 0, 0) );
             goes[1].transform.Translate( new Vector3(1f*(numbers[1].rect.width / 2), 0, 0) );
         }
+        middle.transform.localScale = new Vector3(0.3f,0.3f,0.3f);
 
         // Debug.Log( "middle.transform.localPosition = " + middle.transform.localPosition );
         // Debug.Log( "middle.transform.position = " + middle.transform.position );

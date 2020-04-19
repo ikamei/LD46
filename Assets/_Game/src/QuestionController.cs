@@ -112,6 +112,7 @@ public class QuestionController : MonoBehaviour
                 
                 m_master_ai.incr_mengnan_value( -1 * currentAnswers[i].cost );
                 m_master_ai.incr_score( currentAnswers[i].score );
+                // m_master_ai.incr_score( -100 );
                 if( 0 == currentAnswers[i].reaction )
                 {
                    m_master_ai.set_state( MyConst.ACTION_STATE_MASTER_DISAGREE ); 

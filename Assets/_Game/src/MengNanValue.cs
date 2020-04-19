@@ -24,6 +24,17 @@ public class MengNanValue : MonoBehaviour {
         SetValue(100);
     }
 
+    public void incr_mengnan_value( int delta )
+    {
+        int curr_value = GetValue();
+        curr_value += delta;
+        if( curr_value >  max_value() )
+            curr_value =  max_value();
+        else if( curr_value <  min_value() )
+            curr_value =  min_value();
+        SetValue( curr_value );
+    }
+
     public int max_value()
     {
         return 100;

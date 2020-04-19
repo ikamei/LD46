@@ -171,13 +171,7 @@ public class MasterAI : MonoBehaviour
     
     public void incr_mengnan_value( int delta )
     {
-        int curr_value = m_mengnan_value.GetValue();
-        curr_value += delta;
-        if( curr_value > m_mengnan_value.max_value() )
-            curr_value = m_mengnan_value.max_value();
-        else if( curr_value < m_mengnan_value.min_value() )
-            curr_value = m_mengnan_value.min_value();
-        m_mengnan_value.SetValue( curr_value );
+        m_mengnan_value.incr_mengnan_value( delta );
     }
 
     public void incr_score( int delta )

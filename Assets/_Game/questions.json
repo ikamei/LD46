@@ -4,11 +4,7 @@
 			"question": "What are your greatest strengths?",
 			"answers": [
 				{
-<<<<<<< HEAD
 					"answer": "I... team work... I guess?",
-=======
-					"answer": "I... team work,,, I guess?",
->>>>>>> a499199... add right game
 					"cost": 10,
 					"score": 10,
 					"reaction": 1

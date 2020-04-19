@@ -12,6 +12,8 @@ public class MasterAI : MonoBehaviour
     QuestionController m_question_controller;
     StopWatch m_stopwatch;
     Animator m_master_animator;
+    MengNanValue m_mengnan_value;
+    GameController m_game_controller;
     void Start()
     {
         m_before_event_callback_enable = false;
@@ -21,6 +23,10 @@ public class MasterAI : MonoBehaviour
         m_stopwatch = go.GetComponent<StopWatch>();
         go = GameObject.Find("Master");
         m_master_animator = go.GetComponentInChildren<Animator>();
+        go = GameObject.Find("MengNanValue");
+        m_mengnan_value = go.GetComponent<MengNanValue>();
+        go = GameObject.Find("GameController");
+        m_game_controller = go.GetComponent<GameController>();
 
         current_state = MyConst.ACTION_STATE_UNKNOWN;
         set_state( MyConst.ACTION_STATE_ASK_QUESTION );
@@ -155,6 +161,36 @@ public class MasterAI : MonoBehaviour
             }
         }
         current_state = state;
+
+    }
+    
+    public void incr_mengnan_value( int delta )
+    {
+        int curr_value = m_mengnan_value.GetValue();
+        curr_value += delta;
+        if( curr_value > m_mengnan_value.max_value() )
+            curr_value = m_mengnan_value.max_value();
+        else if( curr_value < m_mengnan_value.min_value() )
+            curr_value = m_mengnan_value.min_value();
+        m_mengnan_value.SetValue( curr_value );
+    }
+
+    public void incr_score( int delta )
+    {
+        float curr_value = currentInterviewScore.value;
+        curr_value += delta;
+        if( curr_value > 100 )
+        {
+            curr_value = 100;
+            m_game_controller.SetState( GameController.STATE_RESTART );
+
+        }
+        else if( curr_value < 0 )
+        {
+            curr_value = 0;
+            m_game_controller.SetState( GameController.STATE_RESTART );
+        }
+        currentInterviewScore.value += (float)delta;
 
     }
 

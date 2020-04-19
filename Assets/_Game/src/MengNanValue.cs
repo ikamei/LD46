@@ -24,6 +24,15 @@ public class MengNanValue : MonoBehaviour {
         SetValue(100);
     }
 
+    public int max_value()
+    {
+        return 100;
+    }
+    public int min_value()
+    {
+        return 0;
+    }
+
     public int GetValue()
     {
         return m_value;

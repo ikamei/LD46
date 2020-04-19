@@ -105,11 +105,25 @@ public class QuestionController : MonoBehaviour
                 // m_start_tick = System.DateTime.Now;
                 // m_next_action_state = MyConst.ACTION_STATE_ASK_QUESTION;
                 // m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_MASTER_AGREE ); 
-                
-                m_master_ai.set_state( MyConst.ACTION_STATE_REVIEW_ANSWER );
-                // m_master_ai.set_state( MyConst.ACTION_STATE_MASTER_AGREE );
-                // m_master_ai.set_state( MyConst.ACTION_STATE_MASTER_DISAGREE );
 
+                // MengNanValue : currentAnswers[i].cost
+                // InterviewValue : currentAnswers[i].score
+                // Reaction : currentAnswers[i].reaction
+                
+                m_master_ai.incr_mengnan_value( -1 * currentAnswers[i].cost );
+                m_master_ai.incr_score( currentAnswers[i].score );
+                if( 0 == currentAnswers[i].reaction )
+                {
+                   m_master_ai.set_state( MyConst.ACTION_STATE_MASTER_DISAGREE ); 
+                }
+                else if( 1 == currentAnswers[i].reaction )
+                {
+                    m_master_ai.set_state( MyConst.ACTION_STATE_REVIEW_ANSWER );
+                }
+                else if( 2 == currentAnswers[i].reaction )
+                {
+                    m_master_ai.set_state( MyConst.ACTION_STATE_MASTER_AGREE );                    
+                }
                 return;
             }
         }

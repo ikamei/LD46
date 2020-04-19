@@ -32,9 +32,8 @@ public class FightingGame : MonoBehaviour
         audioSource.clip = winSFX;
         audioSource.Play();
         StartCoroutine(WaitAndFireNextRound());
-
-        var mengNan = mengNanValue.GetValue(); 
-        mengNanValue.SetValue(mengNan + successScore);
+        
+        mengNanValue.incr_mengnan_value(successScore);
     }
 
     public void RoundLose()
@@ -45,9 +44,8 @@ public class FightingGame : MonoBehaviour
         audioSource.clip = loseSFX;
         audioSource.Play();
         StartCoroutine(WaitAndFireNextRound());
-        
-        var mengNan = mengNanValue.GetValue(); 
-        mengNanValue.SetValue(mengNan - loseScore);
+
+        mengNanValue.incr_mengnan_value(-loseScore);
     }
     
     IEnumerator WaitAndFireNextRound()

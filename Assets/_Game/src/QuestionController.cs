@@ -13,7 +13,6 @@ public class QuestionController : MonoBehaviour
     public MengNanValue currentMengNanValue;
     public FloatValue currentInterviewScore;
     public StopWatch stopWatch;
-    public Animator m_master_animator;
 
     public TextMeshProUGUI questionText;
     public AnswerGroupControl answersGroup;
@@ -23,10 +22,18 @@ public class QuestionController : MonoBehaviour
     List<Answer> currentAnswers;
     // Animator m_master_animator;        
     System.DateTime m_start_tick;
-    System.DateTime m_start_answer_tick;
+    // System.DateTime m_start_answer_tick;
+    Animator m_master_animator = null;
+    int m_next_action_state;
     
     void Awake()
     {
+        m_next_action_state = MyConst.ACTION_STATE_UNKNOWN;
+        if( null==m_master_animator )
+        {
+            GameObject master_go = GameObject.Find("Master");
+            m_master_animator = master_go.GetComponentInChildren<Animator>();
+        }
         Parse();
     }
 
@@ -55,15 +62,34 @@ public class QuestionController : MonoBehaviour
             SelectAnswer(3);
         }
         System.TimeSpan span = System.DateTime.Now - m_start_tick;
+        if( null==m_master_animator )
+        {
+            GameObject master_go = GameObject.Find("Master");
+            m_master_animator = master_go.GetComponentInChildren<Animator>();
+        }
         if( span.TotalMilliseconds > 2000 )
         {
-            m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_WAIT_QUESTION );
+            if( MyConst.ACTION_STATE_WAIT_QUESTION == m_next_action_state )
+            {
+                m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_WAIT_QUESTION );
+                m_next_action_state = MyConst.ACTION_STATE_UNKNOWN;
+            }
+            else if( MyConst.ACTION_STATE_ASK_QUESTION == m_next_action_state )
+            {
+                m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_ASK_QUESTION );
+                m_next_action_state = MyConst.ACTION_STATE_UNKNOWN;
+                // next question
+                Debug.Log("ask next question when answer");
+                stopWatch.StartTheWatch();
+                AskQuestion();
+
+            }
         }
-        span = System.DateTime.Now - m_start_answer_tick;
-        if( span.TotalMilliseconds > 2000 )
-        {
-            m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_ASK_QUESTION );
-        }
+        // span = System.DateTime.Now - m_start_answer_tick;
+        // if( span.TotalMilliseconds > 2000 )
+        // {
+        //     m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_ASK_QUESTION );
+        // }
     }
 
     void SelectAnswer(int i)
@@ -78,10 +104,9 @@ public class QuestionController : MonoBehaviour
                 audioSource.clip = unableToAnswerSFX;
                 audioSource.Play();
                 
-                // next question
-                Debug.Log("ask next question when answer");
-                stopWatch.StartTheWatch();
-                AskQuestion();
+                m_start_tick = System.DateTime.Now;
+                m_next_action_state = MyConst.ACTION_STATE_ASK_QUESTION;
+                m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_REVIEW_ANSWER ); 
                 
                 return;
             }
@@ -90,8 +115,6 @@ public class QuestionController : MonoBehaviour
         audioSource.clip = answerSFX;
         audioSource.Play();
 
-        m_start_answer_tick = System.DateTime.Now;
-        m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_REVIEW_ANSWER ); 
     }
 
     void Parse()
@@ -110,6 +133,7 @@ public class QuestionController : MonoBehaviour
 
         m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_ASK_QUESTION );
         m_start_tick = System.DateTime.Now;
+        m_next_action_state = MyConst.ACTION_STATE_WAIT_QUESTION;
     }
 
     void UpdateGUI(Question question)

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class QuestionControl : MonoBehaviour
+public class QuestionController : MonoBehaviour
 {
     public TextAsset data;
     public AudioClip unableToAnswerSFX;

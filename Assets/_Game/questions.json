@@ -1,22 +1,25 @@
 {
-	"questions":[
+	"questions": [
 		{
 			"question": "What are your greatest strengths?",
 			"answers": [
 				{
-					"answer": "I... team work,,,I guess?",
+					"answer": "I... team work... I guess?",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 1
 				},
 				{
 					"answer": "I m always constantly perfecting my professional skill",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 2
 				},
 				{
 					"answer": "THE STRENGTH TO OVERCOME ANY CREATURE ON THIS PLANET!",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 0
 				}
 			]
 		},
@@ -24,19 +27,22 @@
 			"question": "Why do you want to work here?",
 			"answers": [
 				{
-					"answer": "rly need to pay the bill…ASAP!",
+					"answer": "rly need to pay the bill...ASAP!",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 0
 				},
 				{
-					"answer": "the realization of my self-worth ?",
+					"answer": "the realization of my self-worth?",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 1
 				},
 				{
-					"answer": "I DO NOT WANT WORK HERE ! YOU WANT ME WORK HERE!",
+					"answer": "I DO NOT WANT WORK HERE! YOU WANT ME WORK HERE!",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 2
 				}
 			]
 		},
@@ -44,19 +50,22 @@
 			"question": "What about your ability to work under pressure?",
 			"answers": [
 				{
-					"answer": "to be honest sometimes I can be a little overreac…",
+					"answer": "to be honest sometimes I can be a little overreac...",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 0
 				},
 				{
 					"answer": "Pretty well I guess?",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 1
 				},
 				{
 					"answer": "I ONLY CARE ABOUT SOMEONE’S SKULL UNDER PRESSURE WHEN I AM PUNCHING",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 0
 				}
 			]
 
@@ -65,19 +74,22 @@
 			"question": "Are you willing to work overtime?",
 			"answers": [
 				{
-					"answer": "yes ! As long as you pay me",
+					"answer": "yes! As long as you pay me",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 1
 				},
 				{
 					"answer": "Rly depnds",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 1
 				},
 				{
 					"answer": "ARE YOU WILLING TO SAY HELLO TO MY MIGHTY FISTS?",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 0
 				}
 			]
 		},
@@ -87,17 +99,20 @@
 				{
 					"answer": "Eh, Don’t do it again?",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 1
 				},
 				{
 					"answer": "Only team work makes perfect!",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 2
 				},
 				{
-					"answer": "I DO NOT LEARN FROM MISTAKES , I LEARN FROM THE SCREAM OF MY ENEMY!",
+					"answer": "I DO NOT LEARN FROM MISTAKES, I LEARN FROM THE SCREAM OF MY ENEMY!",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 1
 				}
 			]
 		},
@@ -107,17 +122,20 @@
 				{
 					"answer": "I guess I will be the obedient good boy?",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 0
 				},
 				{
 					"answer": "Beta wolf who can be trusted",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 1
 				},
 				{
 					"answer": "I AM THE HUNTER WHO KILL WOLVES ALIVE AND WEAR THEIR SKIN BEFORE THEIR KIDS!",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 2
 				}
 			]
 		},
@@ -125,9 +143,137 @@
 			"question": "What Is Your Dream Job?",
 			"answers": [
 				{
-					"answer": "two-day weekend oh! And…Double pay at the end of year?",
+					"answer": "two-day weekend oh! And ... Double pay at the end of year?",
 					"cost": 10,
-					"score": 10
+					"score": 10,
+					"reaction": 0
+				},
+				{
+					"answer": "I rly don’t have any idea",
+					"cost": 10,
+					"score": 10,
+					"reaction": 1
+				},
+				{
+					"answer": "SLAUGHTERING ALIENS ON DISTANT JUPITER AND SHOWERING WITH THEIR BLOOD!",
+					"cost": 10,
+					"score": 10,
+					"reaction": 0
+				}
+			]
+		},
+		{
+			"question": "Where do you see yourself in 5 years?",
+			"answers": [
+				{
+					"answer": "Pfff…I don’t know maybe start dating I guess?",
+					"cost": 10,
+					"score": 10,
+					"reaction": 0
+				},
+				{
+					"answer": "Pay the bill , stay living and try not to freak out too often",
+					"cost": 10,
+					"score": 10,
+					"reaction": 1
+				},
+				{
+					"answer": "I DON’T NEED 5 YEARS TO TAKE OVER THE WHOLE COMPANY",
+					"cost": 10,
+					"score": 10,
+					"reaction": 2
+				}
+			]
+		},
+		{
+			"question": "What is your philosophy towards work?",
+			"answers": [
+				{
+					"answer": "I m not sure ... I m not rly good at philosophy u know ...",
+					"cost": 10,
+					"score": 10,
+					"reaction": 0
+				},
+				{
+					"answer": "Work Hard, Work Harder",
+					"cost": 10,
+					"score": 10,
+					"reaction": 2
+				},
+				{
+					"answer": "I KILL THE GUY WHOES NAME IS PHILOSOPHY AND MAKE A GOOD EXAMPLE",
+					"cost": 10,
+					"score": 10,
+					"reaction": 0
+				}
+			]
+		},
+		{
+			"question": "What irrtates you about co-workers?",
+			"answers": [
+				{
+					"answer": "Im kinda easy going person so...",
+					"cost": 10,
+					"score": 10,
+					"reaction": 2
+				},
+				{
+					"answer": "invasion of privacy",
+					"cost": 10,
+					"score": 10,
+					"reaction": 1
+				},
+				{
+					"answer": "KEEP ASKING STUPID QUESTIONS",
+					"cost": 10,
+					"score": 10,
+					"reaction": 0
+				}
+			]
+		},
+		{
+			"question": "Are you willing to put the interests of the organization before ur own?",
+			"answers": [
+				{
+					"answer": "Wow that’s a tough one",
+					"cost": 10,
+					"score": 10,
+					"reaction": 1
+				},
+				{
+					"answer": "Of course! No Big O , No wages!",
+					"cost": 10,
+					"score": 10,
+					"reaction": 2
+				},
+				{
+					"answer": "ARE YOU WILLING TO PUT MY FIST BEFORE YOUR FOREHEAD?",
+					"cost": 10,
+					"score": 10,
+					"reaction": 0
+				}
+			]
+		},
+		{
+			"question": "So what quality do you seek in a boss?",
+			"answers": [
+				{
+					"answer": "Pay the bill on time that’s all",
+					"cost": 10,
+					"score": 10,
+					"reaction": 1
+				},
+				{
+					"answer": "A people person would be rly nice",
+					"cost": 10,
+					"score": 10,
+					"reaction": 2
+				},
+				{
+					"answer": "KNOWING WHAT TIME TO GIVE UP, ESPECIALLY WHEN I AM AROUND",
+					"cost": 10,
+					"score": 10,
+					"reaction": 1
 				}
 			]
 		}

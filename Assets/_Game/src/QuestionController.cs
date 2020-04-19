@@ -175,6 +175,7 @@ public class Answer
     public string answer;
     public int cost;
     public int score;
+    public int reaction;
 
     public void Execute(MengNanValue mengNanValue, FloatValue interviewScore)
     {

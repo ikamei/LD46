@@ -19,10 +19,15 @@ public class QuestionController : MonoBehaviour
 
     List<Question> questions;
     List<Answer> currentAnswers;
+    Animator m_master_animator;        
+    System.DateTime m_start_tick;
     
     void Start()
     {
         Parse();
+
+        GameObject master_go = GameObject.Find("Master");
+        m_master_animator = master_go.GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -42,6 +47,11 @@ public class QuestionController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.D))
         {
             SelectAnswer(3);
+        }
+        System.TimeSpan span = System.DateTime.Now - m_start_tick;
+        if( span.TotalMilliseconds > 2000 )
+        {
+            m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_WAIT_QUESTION );
         }
     }
 
@@ -68,6 +78,8 @@ public class QuestionController : MonoBehaviour
         Debug.Log($"unable to execute answer");
         audioSource.clip = answerSFX;
         audioSource.Play();
+
+        m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_REVIEW_ANSWER ); 
     }
 
     void OnGUI() {
@@ -87,6 +99,9 @@ public class QuestionController : MonoBehaviour
         var question = Pick();
         currentAnswers = question.answers;
         UpdateGUI(question);
+
+        m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_ASK_QUESTION );
+        m_start_tick = System.DateTime.Now;
     }
 
     void UpdateGUI(Question question)

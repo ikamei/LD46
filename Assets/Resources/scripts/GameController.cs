@@ -1,7 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class GameController : MonoBehaviour {
+public class GameController : MonoBehaviour
+{
+    public AudioSource bgm;
+    public float lowerVolume = .2f;
+    public NumberCountdown countdown;
+    
     public const int STATE_START   = 0;
     public const int STATE_INTRO   = 1;
     public const int STATE_LOADING = 2;
@@ -18,7 +23,7 @@ public class GameController : MonoBehaviour {
     List<GameObject> pages_goes;
     MasterAI m_master_ai;
 
-    public FightingGame fightingGame;
+
 
     void Start()
     {
@@ -69,6 +74,8 @@ public class GameController : MonoBehaviour {
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
+
+                bgm.volume = lowerVolume;
             }
         }
         else if( STATE_INTRO == current_state )
@@ -79,9 +86,10 @@ public class GameController : MonoBehaviour {
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
-                
+
+                bgm.Stop();
                 // game start
-                fightingGame.RoundStart();
+                countdown.StartCountdown();
             }
             // if( STATE_GAMING == state )
             // {

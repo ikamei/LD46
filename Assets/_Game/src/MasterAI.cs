@@ -31,8 +31,6 @@ public class MasterAI : MonoBehaviour
         m_mengnan_value = go.GetComponent<MengNanValue>();
         go = GameObject.Find("GameController");
         m_game_controller = go.GetComponent<GameController>();
-        
-        round_start();
     }
 
     public void round_start()

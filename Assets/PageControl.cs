@@ -1,4 +1,4 @@
-﻿using DG.Tweening;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -6,10 +6,13 @@ public class PageControl : MonoBehaviour
 {
     public PageControl nextPage;
     public IntroControl introControl;
-    public float sentenceFadeTime = .5f;
+    public float characterSpeed = .02f;
+    public AudioSource sfx;
 
     TextMeshProUGUI[] sentences;
     int index = 0;
+    string cachedText;
+    Coroutine currentCoroutine;
 
     void Awake()
     {
@@ -22,19 +25,33 @@ public class PageControl : MonoBehaviour
         {
             sentence.gameObject.SetActive(false);
         }
-        ShowSentence();
+        currentCoroutine = StartCoroutine(ShowSentence());
     }
 
     void Update()
     {
         if (Input.anyKeyDown)
         {
-            Debug.Log("any key");
-            ShowSentence();
+            if (currentCoroutine == null)
+            {
+                currentCoroutine = StartCoroutine(ShowSentence());
+            }
+            else
+            {
+                LineEnd();
+            }
         }
     }
 
-    void ShowSentence()
+    void LineEnd()
+    {
+        StopCoroutine(currentCoroutine);
+        sentences[index].text = cachedText; 
+        currentCoroutine = null;
+        index++;
+    }
+
+    IEnumerator ShowSentence()
     {
         Debug.Log($"[{name}] sentence count: {sentences.Length}, index: {index}");
         if (index >= sentences.Length)
@@ -43,16 +60,26 @@ public class PageControl : MonoBehaviour
             {
                 introControl.Next();
                 gameObject.SetActive(false);
-                return;
+                yield break;
             }
             nextPage.gameObject.SetActive(true);
             gameObject.SetActive(false);
-            return;
+            yield break;
         }
 
         var textControl = sentences[index];
+
+        cachedText = textControl.text;
+        textControl.text = "";
         textControl.gameObject.SetActive(true);
-        textControl.DOFade(1f, sentenceFadeTime).From(0);
+
+        for (var i = 1; i <= cachedText.Length; ++i)
+        {
+            textControl.text = cachedText.Substring(0, i);
+            sfx.Play();
+            yield return new WaitForSeconds(characterSpeed);
+        }
         index++;
+        currentCoroutine = null;
     }
 }

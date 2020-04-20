@@ -30,7 +30,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.2
+        time: 0.4
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -48,17 +48,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 8e6d1a937819e8247a082446f1bec265, type: 3}
+      value: {fileID: 21300000, guid: ce10afd96f94d804fa9314d5f2720e6a, type: 3}
     - time: 0.1
-      value: {fileID: 21300000, guid: f15cf769bc7820c4a9d6687b19cf68ec, type: 3}
+      value: {fileID: 21300000, guid: 850e02d93ae8e4a48ac3a77207f2f064, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: e1d4f0128aaf9eb49ba8638be01ebdba, type: 3}
+      value: {fileID: 21300000, guid: f9bc1a168cd51a543ba7346bd561e1bd, type: 3}
     - time: 0.3
-      value: {fileID: 21300000, guid: 79b5fb271f4a7524f8fb7fef18b622a2, type: 3}
+      value: {fileID: 21300000, guid: a616f0e33e3b80e43b47a9064984b030, type: 3}
     - time: 0.4
-      value: {fileID: 21300000, guid: 05d85e67934fdaa4dbbd74c050c1e4bf, type: 3}
+      value: {fileID: 21300000, guid: 13928b797f3f95049ad7480a82cd1d60, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: 944d27eedad80fc459c7763d482a90a4, type: 3}
+      value: {fileID: 21300000, guid: 11d0b3053d570d447b26da0575ba02f6, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -85,12 +85,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 8e6d1a937819e8247a082446f1bec265, type: 3}
-    - {fileID: 21300000, guid: f15cf769bc7820c4a9d6687b19cf68ec, type: 3}
-    - {fileID: 21300000, guid: e1d4f0128aaf9eb49ba8638be01ebdba, type: 3}
-    - {fileID: 21300000, guid: 79b5fb271f4a7524f8fb7fef18b622a2, type: 3}
-    - {fileID: 21300000, guid: 05d85e67934fdaa4dbbd74c050c1e4bf, type: 3}
-    - {fileID: 21300000, guid: 944d27eedad80fc459c7763d482a90a4, type: 3}
+    - {fileID: 21300000, guid: ce10afd96f94d804fa9314d5f2720e6a, type: 3}
+    - {fileID: 21300000, guid: 850e02d93ae8e4a48ac3a77207f2f064, type: 3}
+    - {fileID: 21300000, guid: f9bc1a168cd51a543ba7346bd561e1bd, type: 3}
+    - {fileID: 21300000, guid: a616f0e33e3b80e43b47a9064984b030, type: 3}
+    - {fileID: 21300000, guid: 13928b797f3f95049ad7480a82cd1d60, type: 3}
+    - {fileID: 21300000, guid: 11d0b3053d570d447b26da0575ba02f6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -125,7 +125,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.2
+        time: 0.4
         value: 1
         inSlope: Infinity
         outSlope: Infinity

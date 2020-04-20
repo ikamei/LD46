@@ -69,9 +69,6 @@ public class GameController : MonoBehaviour {
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
-                
-                // game start
-                fightingGame.RoundStart();
             }
         }
         else if( STATE_INTRO == current_state )
@@ -99,9 +96,6 @@ public class GameController : MonoBehaviour {
                     pages_goes[j].active = false;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
-                
-                // game start
-                fightingGame.RoundStart();
             }
         }
         else if( STATE_GAMING == current_state )

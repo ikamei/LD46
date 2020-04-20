@@ -97,6 +97,7 @@ public class QuestionController : MonoBehaviour
         {
             if (currentAnswers[i].cost <= mengNan)
             {
+                questionDialog.idle = false;
                 Debug.Log($"execute answer: {currentAnswers[i].answer}");
                 // currentAnswers[i].Execute(currentMengNanValue, currentInterviewScore);
                 audioSource.clip = unableToAnswerSFX;

@@ -4,23 +4,30 @@
 			"question": "What are your greatest strengths?",
 			"answers": [
 				{
-					"answer": "I... team work... I guess?",
-					"cost": 10,
-					"score": 10,
+					"answer": "I... team work,,,I guess?",
+					"cost": 5,
+					"score": 5,
 					"reaction": 1,
 					"isMacho": false
 				},
 				{
-					"answer": "I m always constantly perfecting my professional skill",
+					"answer": "I'm very friendly~",
 					"cost": 10,
-					"score": 10,
+					"score": 0,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "I m always constantly perfecting my professional skill",
+					"cost": 25,
+					"score": 20,
 					"reaction": 2,
 					"isMacho": false
 				},
 				{
 					"answer": "THE STRENGTH TO OVERCOME ANY CREATURE ON THIS PLANET!",
-					"cost": 10,
-					"score": 10,
+					"cost": 50,
+					"score": -10,
 					"reaction": 0,
 					"isMacho": true
 				}
@@ -31,8 +38,8 @@
 			"answers": [
 				{
 					"answer": "rly need to pay the bill...ASAP!",
-					"cost": 10,
-					"score": 10,
+					"cost": 5,
+					"score": -5,
 					"reaction": 0,
 					"isMacho": false
 				},
@@ -40,13 +47,13 @@
 					"answer": "the realization of my self-worth?",
 					"cost": 10,
 					"score": 10,
-					"reaction": 1,
+					"reaction": 2,
 					"isMacho": false
 				},
 				{
 					"answer": "I DO NOT WANT WORK HERE! YOU WANT ME WORK HERE!",
-					"cost": 10,
-					"score": 10,
+					"cost": 25,
+					"score": 20,
 					"reaction": 2,
 					"isMacho": true
 				}
@@ -57,8 +64,8 @@
 			"answers": [
 				{
 					"answer": "to be honest sometimes I can be a little overreac...",
-					"cost": 10,
-					"score": 10,
+					"cost": 5,
+					"score": -5,
 					"reaction": 0,
 					"isMacho": false
 				},
@@ -71,8 +78,8 @@
 				},
 				{
 					"answer": "I ONLY CARE ABOUT SOMEONE’S SKULL UNDER PRESSURE WHEN I AM PUNCHING",
-					"cost": 10,
-					"score": 10,
+					"cost": 25,
+					"score": -5,
 					"reaction": 0,
 					"isMacho": true
 				}
@@ -84,22 +91,29 @@
 			"answers": [
 				{
 					"answer": "yes! As long as you pay me",
-					"cost": 10,
-					"score": 10,
-					"reaction": 1,
+					"cost": 5,
+					"score": 0,
+					"reaction": 0,
 					"isMacho": false
 				},
 				{
 					"answer": "Rly depnds",
 					"cost": 10,
-					"score": 10,
+					"score": 0,
 					"reaction": 1,
 					"isMacho": false
 				},
 				{
+					"answer": "No, I don't like it",
+					"cost": 25,
+					"score": -5,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
 					"answer": "ARE YOU WILLING TO SAY HELLO TO MY MIGHTY FISTS?",
-					"cost": 10,
-					"score": 10,
+					"cost": 50,
+					"score": -5,
 					"reaction": 0,
 					"isMacho": true
 				}
@@ -110,21 +124,28 @@
 			"answers": [
 				{
 					"answer": "Eh, Don’t do it again?",
+					"cost": 5,
+					"score": 5,
+					"reaction": 1,
+					"isMacho": false
+				},
+				{
+					"answer": "No, I won't fail",
 					"cost": 10,
-					"score": 10,
+					"score": 5,
 					"reaction": 1,
 					"isMacho": false
 				},
 				{
 					"answer": "Only team work makes perfect!",
-					"cost": 10,
-					"score": 10,
+					"cost": 25,
+					"score": 20,
 					"reaction": 2,
 					"isMacho": false
 				},
 				{
 					"answer": "I DO NOT LEARN FROM MISTAKES, I LEARN FROM THE SCREAM OF MY ENEMY!",
-					"cost": 10,
+					"cost": 50,
 					"score": 10,
 					"reaction": 1,
 					"isMacho": true
@@ -136,8 +157,8 @@
 			"answers": [
 				{
 					"answer": "I guess I will be the obedient good boy?",
-					"cost": 10,
-					"score": 10,
+					"cost": 5,
+					"score": 5,
 					"reaction": 0,
 					"isMacho": false
 				},
@@ -150,8 +171,8 @@
 				},
 				{
 					"answer": "I AM THE HUNTER WHO KILL WOLVES ALIVE AND WEAR THEIR SKIN BEFORE THEIR KIDS!",
-					"cost": 10,
-					"score": 10,
+					"cost": 25,
+					"score": 30,
 					"reaction": 2,
 					"isMacho": true
 				}
@@ -162,22 +183,22 @@
 			"answers": [
 				{
 					"answer": "two-day weekend oh! And ... Double pay at the end of year?",
-					"cost": 10,
-					"score": 10,
-					"reaction": 0,
-					"isMacho": false
-				},
-				{
-					"answer": "I rly don’t have any idea",
-					"cost": 10,
+					"cost": 5,
 					"score": 10,
 					"reaction": 1,
 					"isMacho": false
 				},
 				{
-					"answer": "SLAUGHTERING ALIENS ON DISTANT JUPITER AND SHOWERING WITH THEIR BLOOD!",
+					"answer": "I rly don’t have any idea",
 					"cost": 10,
-					"score": 10,
+					"score": 5,
+					"reaction": 1,
+					"isMacho": false
+				},
+				{
+					"answer": "SLAUGHTERING ALIENS ON DISTANT JUPITER AND SHOWERING WITH THEIR BLOOD!",
+					"cost": 25,
+					"score": -20,
 					"reaction": 0,
 					"isMacho": true
 				}
@@ -187,23 +208,23 @@
 			"question": "Where do you see yourself in 5 years?",
 			"answers": [
 				{
-					"answer": "Pfff…I don’t know maybe start dating I guess?",
-					"cost": 10,
-					"score": 10,
-					"reaction": 0,
+					"answer": "Pfff...I don’t know maybe start dating I guess?",
+					"cost": 5,
+					"score": 0,
+					"reaction": 1,
 					"isMacho": false
 				},
 				{
 					"answer": "Pay the bill , stay living and try not to freak out too often",
 					"cost": 10,
-					"score": 10,
-					"reaction": 1,
+					"score": -5,
+					"reaction": 0,
 					"isMacho": false
 				},
 				{
 					"answer": "I DON’T NEED 5 YEARS TO TAKE OVER THE WHOLE COMPANY",
-					"cost": 10,
-					"score": 10,
+					"cost": 25,
+					"score": 30,
 					"reaction": 2,
 					"isMacho": true
 				}
@@ -214,22 +235,29 @@
 			"answers": [
 				{
 					"answer": "I m not sure ... I m not rly good at philosophy u know ...",
-					"cost": 10,
-					"score": 10,
+					"cost": 5,
+					"score": -10,
 					"reaction": 0,
 					"isMacho": false
 				},
 				{
-					"answer": "Work Hard, Work Harder",
+					"answer": "Be smart!",
 					"cost": 10,
-					"score": 10,
+					"score": 5,
+					"reaction": 1,
+					"isMacho": false
+				},
+				{
+					"answer": "Work Hard, Work Harder",
+					"cost": 25,
+					"score": 20,
 					"reaction": 2,
 					"isMacho": false
 				},
 				{
 					"answer": "I KILL THE GUY WHOES NAME IS PHILOSOPHY AND MAKE A GOOD EXAMPLE",
-					"cost": 10,
-					"score": 10,
+					"cost": 50,
+					"score": -20,
 					"reaction": 0,
 					"isMacho": true
 				}
@@ -239,23 +267,23 @@
 			"question": "What irrtates you about co-workers?",
 			"answers": [
 				{
-					"answer": "Im kinda easy going person so...",
-					"cost": 10,
-					"score": 10,
+					"answer": "I'm kinda easy going person so...",
+					"cost": 5,
+					"score": 15,
 					"reaction": 2,
 					"isMacho": false
 				},
 				{
-					"answer": "invasion of privacy",
+					"answer": "Invasion of privacy",
 					"cost": 10,
-					"score": 10,
+					"score": 5,
 					"reaction": 1,
 					"isMacho": false
 				},
 				{
 					"answer": "KEEP ASKING STUPID QUESTIONS",
-					"cost": 10,
-					"score": 10,
+					"cost": 25,
+					"score": 0,
 					"reaction": 0,
 					"isMacho": true
 				}
@@ -266,23 +294,23 @@
 			"answers": [
 				{
 					"answer": "Wow that’s a tough one",
-					"cost": 10,
-					"score": 10,
-					"reaction": 1,
+					"cost": 5,
+					"score": 0,
+					"reaction": 0,
 					"isMacho": false
 				},
 				{
 					"answer": "Of course! No Big O , No wages!",
 					"cost": 10,
-					"score": 10,
+					"score": 25,
 					"reaction": 2,
 					"isMacho": false
 				},
 				{
 					"answer": "ARE YOU WILLING TO PUT MY FIST BEFORE YOUR FOREHEAD?",
-					"cost": 10,
-					"score": 10,
-					"reaction": 0,
+					"cost": 25,
+					"score": -20,
+					"reaction": 1,
 					"isMacho": true
 				}
 			]
@@ -292,23 +320,311 @@
 			"answers": [
 				{
 					"answer": "Pay the bill on time that’s all",
-					"cost": 10,
-					"score": 10,
+					"cost": 5,
+					"score": 0,
 					"reaction": 1,
 					"isMacho": false
 				},
 				{
 					"answer": "A people person would be rly nice",
 					"cost": 10,
-					"score": 10,
+					"score": 5,
 					"reaction": 2,
 					"isMacho": false
 				},
 				{
 					"answer": "KNOWING WHAT TIME TO GIVE UP, ESPECIALLY WHEN I AM AROUND",
+					"cost": 25,
+					"score": 15,
+					"reaction": 1,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "What are your achievements?",
+			"answers": [
+				{
+					"answer": "Once I ate 24 Hot-dogs...",
+					"cost": 5,
+					"score": -10,
+					"reaction": 1,
+					"isMacho": false
+				},
+				{
+					"answer": "Not yet but I am always ready to achieve",
 					"cost": 10,
+					"score": 25,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "I PUNCH MY SELF-DOUBT TO DEATH, BY MY BEAR HANDS",
+					"cost": 25,
 					"score": 10,
 					"reaction": 1,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "Tell us about your college life?",
+			"answers": [
+				{
+					"answer": "alcohol...?",
+					"cost": 5,
+					"score": -10,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "Participating actively in community charities!",
+					"cost": 10,
+					"score": 15,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "I ALMOST TOOK A COLLEGER’S LIFE, SO CLOSE",
+					"cost": 25,
+					"score": -20,
+					"reaction": 0,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "How quickly can you adapt to a new work?",
+			"answers": [
+				{
+					"answer": "Can't say, I may need a while",
+					"cost": 5,
+					"score": 0,
+					"reaction": 1,
+					"isMacho": false
+				},
+				{
+					"answer": "Maybe a week, i guess",
+					"cost": 10,
+					"score": 5,
+					"reaction": 1,
+					"isMacho": false
+				},
+				{
+					"answer": "Super Mega Soon!",
+					"cost": 25,
+					"score": 15,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "DEPENDS ON HOW LONG THE COPS KEEP ME",
+					"cost": 50,
+					"score": -15,
+					"reaction": 0,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "Do you have any questions for us?",
+			"answers": [
+				{
+					"answer": "Are we done yet? I mean ...",
+					"cost": 5,
+					"score": -10,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "Not really I am A good answer boy!",
+					"cost": 10,
+					"score": 20,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "I wanna know something here...",
+					"cost": 25,
+					"score": 10,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "YOU EVER DANCE WITH THE DEVIL BY THE PALE MOONLIGHT?",
+					"cost": 50,
+					"score": -10,
+					"reaction": 1,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "What can you offer the company?",
+			"answers": [
+				{
+					"answer": "My...work?",
+					"cost": 5,
+					"score": 5,
+					"reaction": 1,
+					"isMacho": false
+				},
+				{
+					"answer": "Inexhaustible creativity",
+					"cost": 10,
+					"score": 15,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "POPULATION CONTROL",
+					"cost": 25,
+					"score": -20,
+					"reaction": 0,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "What do you know about our company?",
+			"answers": [
+				{
+					"answer": "Emm, i know you are a good company.",
+					"cost": 5,
+					"score": -5,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "Not much, but you pay well right?",
+					"cost": 10,
+					"score": 0,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "You offesr a good ecological environment to let talents grow and develop.",
+					"cost": 25,
+					"score": 25,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "YOU HAVE DIRTY MONEY IN MIAMI, NO WORRY I'VE TAKE CARE OF THAT",
+					"cost": 50,
+					"score": -10,
+					"reaction": 0,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "Do you accept long-term business trip?",
+			"answers": [
+				{
+					"answer": "wow that's a big problem I usually stay on this small town so...",
+					"cost": 5,
+					"score": -10,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "No problem any place u want me to be!",
+					"cost": 10,
+					"score": 20,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "I SPENT 20 YEARS IN VIETNAM , LONGER THAN THAT?",
+					"cost": 25,
+					"score": 5,
+					"reaction": 1,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "How about your computer skills?",
+			"answers": [
+				{
+					"answer": "I know how to use printer? is that count?",
+					"cost": 5,
+					"score": 5,
+					"reaction": 1,
+					"isMacho": false
+				},
+				{
+					"answer": "proficiency in various software!",
+					"cost": 10,
+					"score": 15,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "SKYNET ONCE WANNA KILL ME, SKYNET FAILED",
+					"cost": 25,
+					"score": -15,
+					"reaction": 0,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "Your language skills?",
+			"answers": [
+				{
+					"answer": "I watched some Japanese animes",
+					"cost": 5,
+					"score": -10,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "British English and American English",
+					"cost": 10,
+					"score": -5,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "Ach Ja! Ich kann Deutsch sprechen!",
+					"cost": 25,
+					"score": 15,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "MY BODY LANGUAGE IS VERY ... CONVINCING",
+					"cost": 50,
+					"score": -15,
+					"reaction": 0,
+					"isMacho": true
+				}
+			]
+		},
+		{
+			"question": "Your weakpoints?",
+			"answers": [
+				{
+					"answer": "I can be really nervous sometimes",
+					"cost": 5,
+					"score": 0,
+					"reaction": 0,
+					"isMacho": false
+				},
+				{
+					"answer": "Too hard working",
+					"cost": 10,
+					"score": 20,
+					"reaction": 2,
+					"isMacho": false
+				},
+				{
+					"answer": "IN FINAL PHASE, MY WEAKPOINT IS EXPOSED HEART",
+					"cost": 25,
+					"score": -15,
+					"reaction": 0,
 					"isMacho": true
 				}
 			]

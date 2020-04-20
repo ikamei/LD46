@@ -6,6 +6,7 @@ public class MasterAI : MonoBehaviour
 {
     public FloatValue currentInterviewScore;
     public float initialInterviewScore;
+    public AudioSource bgm;
 
     int current_state;
     bool m_before_event_callback_enable;
@@ -40,6 +41,7 @@ public class MasterAI : MonoBehaviour
         current_state = MyConst.ACTION_STATE_UNKNOWN;
         set_state( MyConst.ACTION_STATE_ASK_QUESTION );
         currentInterviewScore.value = initialInterviewScore;
+        bgm.Play();
     }
 
     void Update()

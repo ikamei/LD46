@@ -7,6 +7,7 @@ public class AnswerGUIControl : MonoBehaviour
 {
     public TextMeshProUGUI answerText;
     public Image costImage;
+    public Image mask;
 
     public Sprite spr5;
     public Sprite spr10;
@@ -33,6 +34,7 @@ public class AnswerGUIControl : MonoBehaviour
         var color = costImage.color;
         color.a = 1;
         costImage.color = color;
+        Show();
     }
 
     public void Clear()
@@ -41,5 +43,15 @@ public class AnswerGUIControl : MonoBehaviour
         var color = costImage.color;
         color.a = 0;
         costImage.color = color;
+    }
+
+    public void Show()
+    {
+        mask.enabled = false;
+    }
+
+    public void Hide()
+    {
+        mask.enabled = true;
     }
 }

@@ -97,10 +97,11 @@ public class QuestionController : MonoBehaviour
         {
             if (currentAnswers[i].cost <= mengNan)
             {
+                answersGroup.HideWithoutAnswer(i);
                 questionDialog.idle = false;
                 Debug.Log($"execute answer: {currentAnswers[i].answer}");
                 // currentAnswers[i].Execute(currentMengNanValue, currentInterviewScore);
-                audioSource.clip = unableToAnswerSFX;
+                audioSource.clip = answerSFX;
                 audioSource.Play();
                 
                 // m_start_tick = System.DateTime.Now;
@@ -132,7 +133,7 @@ public class QuestionController : MonoBehaviour
             }
         }
         Debug.Log($"unable to execute answer");
-        audioSource.clip = answerSFX;
+        audioSource.clip = unableToAnswerSFX;
         audioSource.Play();
 
     }

@@ -28,4 +28,15 @@ public class AnswerGroupControl : MonoBehaviour
         }
         
     }
+
+    public void HideWithoutAnswer(int without)
+    {
+        for (var i = 0; i < answersCtrl.Length; ++i)
+        {
+            if (i != without)
+            {
+                answersCtrl[i].Hide();
+            }
+        }
+    }
 }

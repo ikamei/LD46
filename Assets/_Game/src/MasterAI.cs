@@ -124,7 +124,7 @@ public class MasterAI : MonoBehaviour
             {
                 m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_REVIEW_ANSWER );
                 m_stopwatch.StopTheWatch();
-                currentInterviewScore.value -= 10;
+                incr_score(-10);
 
                 m_before_event_callback_enable = true;
                 m_start_tick = System.DateTime.Now;

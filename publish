@@ -1,1 +1,3 @@
 #!/bin/bash
+tar czf Build.tar.gz Build
+scp Build.tar.gz ali-relay:/srv

@@ -104,18 +104,10 @@ public class QuestionController : MonoBehaviour
                 audioSource.clip = answerSFX;
                 audioSource.Play();
                 
-                // m_start_tick = System.DateTime.Now;
-                // m_next_action_state = MyConst.ACTION_STATE_ASK_QUESTION;
-                // m_master_animator.SetInteger( "action", MyConst.ACTION_STATE_MASTER_AGREE ); 
-
-                // MengNanValue : currentAnswers[i].cost
-                // InterviewValue : currentAnswers[i].score
-                // Reaction : currentAnswers[i].reaction
-                
-                m_master_ai.incr_mengnan_value( -1 * currentAnswers[i].cost );
-                m_master_ai.incr_score( currentAnswers[i].score );
                 if( false == currentAnswers[i].isMacho )
                     m_master_ai.set_isMacho( false );
+                m_master_ai.incr_mengnan_value( -1 * currentAnswers[i].cost );
+                m_master_ai.incr_score( currentAnswers[i].score );
                 // m_master_ai.incr_score( -100 );
                 if( 0 == currentAnswers[i].reaction )
                 {

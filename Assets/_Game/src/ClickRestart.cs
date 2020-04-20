@@ -1,8 +1,8 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClickToStart : MonoBehaviour
+public class ClickRestart : MonoBehaviour
 {
     public Image image;
     public GameController gameController;
@@ -18,8 +18,7 @@ public class ClickToStart : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            gameController.SetState(GameController.STATE_INTRO);
-            // gameController.SetState(GameController.STATE_RESTART);
+            gameController.SetState(GameController.STATE_START);
         }
     }
 }

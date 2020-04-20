@@ -77,6 +77,17 @@ public class GameController : MonoBehaviour
 
                 bgm.volume = lowerVolume;
             }
+            else if( STATE_RESTART == state )
+            {
+                for( int j=0; j<pages_goes.Count; ++j )
+                    pages_goes[j].active = false;
+                pages_goes[state].active = true;
+                ResetRect(pages_goes[state]);
+                GameObject go = GameObject.Find("RestartPageBackground");
+                ScoreRank sr = go.GetComponent<ScoreRank>();
+                sr.updateGUI();
+            }
+
         }
         else if( STATE_INTRO == current_state )
         {
@@ -111,7 +122,11 @@ public class GameController : MonoBehaviour
             if( STATE_RESTART == state )
             {
                 for( int j=0; j<pages_goes.Count; ++j )
+                {
+                    // if( STATE_GAMING != j )
                     pages_goes[j].active = false;
+                }
+                // Time.timeScale = 0;
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
                 GameObject go = GameObject.Find("RestartPageBackground");
@@ -121,7 +136,7 @@ public class GameController : MonoBehaviour
         }
         else if( STATE_RESTART == current_state )
         {
-            if( STATE_LOADING==state || STATE_GAMING==state )
+            if( STATE_LOADING==state || STATE_GAMING==state || STATE_START == current_state)
             {
                 for( int j=0; j<pages_goes.Count; ++j )
                     pages_goes[j].active = false;

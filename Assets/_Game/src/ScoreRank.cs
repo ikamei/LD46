@@ -14,8 +14,8 @@ public class ScoreRank : MonoBehaviour
     }
     public void updateGUI()
     {
-        // get rank, 0, 1, 2, 3
-        int rank;
+        // get rank, 0a, 1b, 2c, 3man
+        int rank = 0;
         int score = (int)m_master_ai.score();
         bool isMacho = m_master_ai.isMacho();
         if( true == isMacho )

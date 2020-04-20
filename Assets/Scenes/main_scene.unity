@@ -2872,7 +2872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentInterviewScore: {fileID: 11400000, guid: d7e08355f4ac5174fb853fb7830c16fb,
     type: 2}
-  initialInterviewScore: 40
+  initialInterviewScore: 25
 --- !u!1 &1105466729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5443,6 +5443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77b458f55d99c043a949bba614b58e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMengNanValue: 200
 --- !u!224 &586754931556377236 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1014398712096477118, guid: 97328e6f14ecfec4e82329aa2b5b7a81,

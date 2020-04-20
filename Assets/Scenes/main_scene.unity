@@ -2076,6 +2076,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090828837}
     m_Modifications:
+    - target: {fileID: 3957251732969040809, guid: 80456854bac522c488441cb91de978a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -185.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957251732969040809, guid: 80456854bac522c488441cb91de978a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 396.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957251732969040809, guid: 80456854bac522c488441cb91de978a9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 382.66
+      objectReference: {fileID: 0}
     - target: {fileID: 3957251733064285491, guid: 80456854bac522c488441cb91de978a9,
         type: 3}
       propertyPath: successScore
@@ -2200,6 +2215,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sequence Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957251733444028794, guid: 80456854bac522c488441cb91de978a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 332
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957251733444028794, guid: 80456854bac522c488441cb91de978a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -117.6
       objectReference: {fileID: 0}
     - target: {fileID: 3957251733973739188, guid: 80456854bac522c488441cb91de978a9,
         type: 3}
@@ -5444,6 +5469,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMengNanValue: 200
+  fxScale: 0.8
+  fxDuration: 0.2
+  fxDelay: 0.5
+  normalScale: 0.3
 --- !u!224 &586754931556377236 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1014398712096477118, guid: 97328e6f14ecfec4e82329aa2b5b7a81,

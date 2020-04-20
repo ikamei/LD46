@@ -1,9 +1,15 @@
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public class MengNanValue : MonoBehaviour
 {
     public int maxMengNanValue;
+    public float fxScale = .5f;
+    public float fxDuration = .5f;
+    public float fxDelay = .2f;
+    public float normalScale = .3f;
     
     // for inspector debug
     //[SerializeField]
@@ -56,11 +62,12 @@ public class MengNanValue : MonoBehaviour
 
     public void SetValue(int _value)
     {
+        var increase = m_value - _value < 0; 
         m_value = _value;
-        updateGUI();
+        updateGUI(increase);
     }
 
-    void updateGUI()
+    void updateGUI(bool increase)
     {
         int numberCount;
         if (m_value < 10)
@@ -138,9 +145,19 @@ public class MengNanValue : MonoBehaviour
             goes[1].transform.Translate(new Vector3(1f * (numbers[1].rect.width / 2), 0, 0));
         }
 
-        middle.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-
-        // Debug.Log( "middle.transform.localPosition = " + middle.transform.localPosition );
+        middle.transform.localScale = Vector3.one * normalScale;
+        if (increase)
+        {
+            StartCoroutine(TextFx(middle.transform));
+            
+        }
+            // Debug.Log( "middle.transform.localPosition = " + middle.transform.localPosition );
         // Debug.Log( "middle.transform.position = " + middle.transform.position );
+    }
+
+    IEnumerator TextFx(Transform container)
+    {
+        yield return new WaitForSeconds(fxDelay);
+        container.DOScale(normalScale, fxDuration).From(fxScale);
     }
 }

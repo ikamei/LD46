@@ -1,5 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FightingGame : MonoBehaviour
 {
@@ -16,10 +19,24 @@ public class FightingGame : MonoBehaviour
     public AudioClip winSFX;
     public AudioClip loseSFX;
 
+    public TextAsset blameText;
+
+    List<string> blames;
+
+    void Awake()
+    {
+        blames = JsonUtility.FromJson<BlameContainer>(blameText.text).blames;
+    }
+
+    string Pick()
+    {
+        return blames[Random.Range(0, blames.Count)];
+    }
+
     public void RoundStart()
     {
         dialogueControl.gameObject.SetActive(true);
-        dialogueControl.ShowText("blah blah blah ...");
+        dialogueControl.ShowText(Pick());
         countdown.StartCountdown();
         sequenceControl.CreateSequence();
     }
@@ -53,4 +70,10 @@ public class FightingGame : MonoBehaviour
         yield return new WaitForSeconds(1f);
         RoundStart();
     }
+}
+
+[Serializable]
+public class BlameContainer
+{
+    public List<string> blames;
 }

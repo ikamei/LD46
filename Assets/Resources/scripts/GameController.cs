@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public class GameController : MonoBehaviour
 {
     public AudioSource bgm;
     public float lowerVolume = .2f;
     public NumberCountdown countdown;
+    public float bgmFadeTime = 1f;
     
     public const int STATE_START   = 0;
     public const int STATE_INTRO   = 1;
@@ -98,7 +100,7 @@ public class GameController : MonoBehaviour
                 pages_goes[state].active = true;
                 ResetRect(pages_goes[state]);
 
-                bgm.Stop();
+                bgm.DOFade(0, bgmFadeTime);
                 // game start
                 countdown.StartCountdown();
             }
